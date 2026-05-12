@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>치유관광의 시대 — 주역·이근원통·브레인에너지·뉴로하모니·그릿행복여행</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:    #1c1710;
+  --cream:  #faf8f3;
+  --warm:   #f3ede0;
+  --parch:  #ede5d3;
+  --forest: #2a5940;
+  --forest2:#1e4230;
+  --sky:    #1b5f7a;
+  --gold:   #b8861e;
+  --gold2:  #d4a832;
+  --rose:   #9e3a3a;
+  --violet: #5e4590;
+  --sage:   #4a7c59;
+  --muted:  rgba(28,23,16,.55);
+  --border: rgba(28,23,16,.1);
+  --r:      12px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--ink);font-family:'Noto Sans KR',sans-serif;font-weight:300;line-height:1.85;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px;}
+::-webkit-scrollbar-thumb{background:var(--forest);border-radius:2px;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.85rem 2.5rem;
+  background:rgba(250,248,243,.93);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-family:'Noto Serif KR',serif;font-size:.9rem;color:var(--forest);font-weight:600;letter-spacing:.04em;}
+.nav-links{display:flex;gap:1.6rem;list-style:none;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.72rem;letter-spacing:.06em;transition:color .3s;}
+.nav-links a:hover{color:var(--forest);}
+@media(max-width:640px){.nav-links{display:none;}}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;padding:7rem 2rem 5rem;
+  background:var(--forest2);position:relative;overflow:hidden;
+}
+.hero-bg-hex{
+  position:absolute;inset:0;
+  background-image:repeating-linear-gradient(60deg,rgba(255,255,255,.015) 0,rgba(255,255,255,.015) 1px,transparent 0,transparent 50%);
+  background-size:60px 60px;
+}
+.hero-glow{
+  position:absolute;top:30%;left:50%;transform:translate(-50%,-50%);
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(180,134,30,.12),transparent 70%);
+  pointer-events:none;
+}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.35em;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:1.2rem;opacity:0;animation:up .8s ease .2s forwards;}
+.hero-h1{font-family:'Noto Serif KR',serif;font-size:clamp(2rem,5.5vw,4rem);font-weight:700;line-height:1.2;color:#fff;margin-bottom:1rem;opacity:0;animation:up .9s ease .4s forwards;}
+.hero-h1 .gold{color:var(--gold2);}
+.hero-divider{width:80px;height:1px;background:linear-gradient(to right,transparent,var(--gold2),transparent);margin:.8rem auto;opacity:0;animation:up .8s ease .5s forwards;}
+.hero-h2{font-family:'Playfair Display',serif;font-size:clamp(1rem,2.5vw,1.5rem);font-style:italic;color:rgba(255,255,255,.7);margin-bottom:2rem;opacity:0;animation:up .9s ease .6s forwards;}
+.hero-lead{font-size:.95rem;line-height:2.1;color:rgba(255,255,255,.65);max-width:640px;margin-bottom:3rem;opacity:0;animation:up .9s ease .8s forwards;}
+.hero-pills{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;opacity:0;animation:up .9s ease 1s forwards;}
+.hpill{padding:.25rem .85rem;border-radius:20px;font-size:.68rem;letter-spacing:.08em;border:1px solid rgba(255,255,255,.18);color:rgba(255,255,255,.75);}
+.hero-scroll{margin-top:3rem;display:flex;flex-direction:column;align-items:center;gap:.5rem;opacity:0;animation:up 1s ease 1.3s forwards;}
+.hero-scroll span{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.25em;color:rgba(255,255,255,.35);}
+.hero-scroll::after{content:'';display:block;width:1px;height:50px;background:linear-gradient(to bottom,var(--gold2),transparent);animation:pulse 2s ease infinite;}
+@keyframes up{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:none;}}
+@keyframes pulse{0%,100%{opacity:.3;}50%{opacity:1;}}
+
+/* ── LAYOUT ── */
+.wrap{max-width:1100px;margin:0 auto;padding:0 2rem;}
+.sec{padding:6rem 0;}
+.sec-dark{background:var(--forest2);padding:6rem 0;}
+.sec-warm{background:var(--warm);padding:6rem 0;}
+.sec-parch{background:var(--parch);padding:6rem 0;}
+
+.tag{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;margin-bottom:.8rem;}
+.tag-forest{color:var(--forest);}
+.tag-sky{color:var(--sky);}
+.tag-gold{color:var(--gold);}
+.tag-rose{color:var(--rose);}
+.tag-white{color:rgba(255,255,255,.5);}
+
+.h2{font-family:'Noto Serif KR',serif;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:700;line-height:1.25;margin-bottom:1.2rem;color:var(--ink);}
+.h2 em{font-style:normal;color:var(--forest);}
+.h2-white{color:#fff;}
+.h2-white em{color:var(--gold2);}
+.lead{font-size:.97rem;line-height:2.1;color:var(--muted);max-width:680px;}
+.lead-white{color:rgba(255,255,255,.7);}
+
+/* ── SECTION DIVIDER ── */
+.sdiv{display:flex;align-items:center;gap:1.5rem;padding:0 2rem;max-width:1100px;margin:0 auto;}
+.sline{flex:1;height:1px;background:linear-gradient(to right,transparent,var(--border),transparent);}
+.sglyph{font-family:'Noto Serif KR',serif;font-size:.9rem;color:var(--gold);opacity:.6;}
+
+/* ── QUOTE BLOCK ── */
+.qblock{
+  margin:2.5rem 0;padding:2rem 2.5rem;
+  border-left:3px solid var(--gold);
+  background:rgba(184,134,30,.05);border-radius:0 var(--r) var(--r) 0;
+}
+.qblock p{font-family:'Noto Serif KR',serif;font-size:1.05rem;line-height:2.2;color:var(--ink);}
+.qblock cite{display:block;margin-top:.8rem;font-size:.72rem;color:var(--gold);font-style:normal;letter-spacing:.1em;font-family:'DM Mono',monospace;}
+.qblock-dark{background:rgba(212,168,50,.08);border-color:var(--gold2);}
+.qblock-dark p{color:rgba(255,255,255,.85);}
+.qblock-dark cite{color:var(--gold2);}
+
+/* ── CARD GRIDS ── */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem;}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3rem;}
+@media(max-width:900px){.grid-3,.grid-4{grid-template-columns:1fr 1fr;}}
+@media(max-width:580px){.grid-3,.grid-2,.grid-4{grid-template-columns:1fr;}}
+
+.card{padding:2rem;border-radius:var(--r);border:1px solid var(--border);background:#fff;transition:transform .3s,box-shadow .3s;}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(0,0,0,.07);}
+.card-dark{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.08);}
+.card-dark:hover{box-shadow:0 12px 35px rgba(0,0,0,.3);}
+
+.ci{font-size:2rem;margin-bottom:.9rem;}
+.ctag{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.18em;margin-bottom:.4rem;}
+.ctitle{font-family:'Noto Serif KR',serif;font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:.6rem;}
+.ctitle-white{color:#fff;}
+.cbody{font-size:.84rem;line-height:1.95;color:var(--muted);}
+.cbody-white{color:rgba(255,255,255,.65);}
+.chip{display:inline-block;margin-top:.7rem;padding:.2rem .65rem;border-radius:12px;font-size:.62rem;letter-spacing:.06em;font-family:'DM Mono',monospace;}
+
+/* ── HEXAGRAM ── */
+.hexagram-wrap{
+  display:flex;align-items:flex-start;gap:3rem;margin-top:3rem;
+  background:#fff;border:1px solid var(--border);border-radius:var(--r);
+  padding:3rem;
+}
+@media(max-width:700px){.hexagram-wrap{flex-direction:column;}}
+.hex-symbol{
+  flex-shrink:0;
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+}
+.hex-line{
+  width:60px;height:5px;background:var(--ink);border-radius:2px;
+}
+.hex-line.broken{
+  background:transparent;
+  box-shadow:none;
+  display:flex;gap:6px;
+}
+.hex-line.broken::before,.hex-line.broken::after{
+  content:'';flex:1;height:5px;background:var(--ink);border-radius:2px;
+}
+.hex-name{margin-top:.8rem;font-family:'Noto Serif KR',serif;font-size:1.4rem;font-weight:700;color:var(--gold);}
+.hex-ename{font-size:.7rem;color:var(--muted);letter-spacing:.1em;}
+.hex-content h3{font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.8rem;}
+.hex-content p{font-size:.9rem;line-height:2;color:var(--muted);}
+
+/* ── TWO-WAY ── */
+.twoways{
+  display:grid;grid-template-columns:1fr auto 1fr;
+  gap:2rem;align-items:center;margin-top:3rem;
+}
+@media(max-width:640px){.twoways{grid-template-columns:1fr;}}
+.tw-box{padding:2rem;border-radius:var(--r);border:1px solid var(--border);}
+.tw-out{background:rgba(42,89,64,.05);border-color:rgba(42,89,64,.2);}
+.tw-in{background:rgba(91,69,144,.05);border-color:rgba(91,69,144,.2);}
+.tw-label{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;margin-bottom:.5rem;}
+.tw-out .tw-label{color:var(--forest);}
+.tw-in .tw-label{color:var(--violet);}
+.tw-title{font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:700;margin-bottom:.9rem;}
+.tw-out .tw-title{color:var(--forest);}
+.tw-in .tw-title{color:var(--violet);}
+.tw-items{list-style:none;}
+.tw-items li{font-size:.84rem;color:var(--muted);padding:.3rem 0;border-bottom:1px solid var(--border);}
+.tw-items li:last-child{border-bottom:none;}
+.tw-arrow{text-align:center;font-size:2rem;color:var(--gold);}
+
+/* ── FAWA STEPS ── */
+.fawa-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:3px;}
+.fawa-step{display:grid;grid-template-columns:200px 1fr;gap:0;border-radius:var(--r);overflow:hidden;transition:transform .3s;}
+.fawa-step:hover{transform:translateX(4px);}
+@media(max-width:680px){.fawa-step{grid-template-columns:1fr;}}
+.fs-left{padding:2.2rem 1.8rem;display:flex;flex-direction:column;justify-content:center;}
+.fs-right{padding:2.2rem 2.5rem;background:#fff;border:1px solid var(--border);border-left:none;border-radius:0 var(--r) var(--r) 0;}
+@media(max-width:680px){.fs-right{border-left:1px solid var(--border);border-top:none;border-radius:0 0 var(--r) var(--r);}.fs-left{border-radius:var(--r) var(--r) 0 0;}}
+.fn{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:700;opacity:.12;color:#fff;line-height:1;}
+.fkr{font-family:'Noto Serif KR',serif;font-size:2rem;font-weight:700;color:#fff;}
+.fen{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;color:rgba(255,255,255,.5);}
+.figeun{margin-top:.6rem;font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.06em;color:rgba(255,255,255,.4);background:rgba(255,255,255,.07);padding:.2rem .55rem;border-radius:4px;display:inline-block;}
+.f1 .fs-left{background:linear-gradient(135deg,#2a5940,#1e4230);}
+.f2 .fs-left{background:linear-gradient(135deg,#1b5f7a,#124460);}
+.f3 .fs-left{background:linear-gradient(135deg,#b8861e,#8a6416);}
+.f4 .fs-left{background:linear-gradient(135deg,#5e4590,#42306a);}
+.frtitle{font-family:'Noto Serif KR',serif;font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:.6rem;}
+.frbody{font-size:.85rem;line-height:1.95;color:var(--muted);margin-bottom:.9rem;}
+.frbody strong{color:var(--ink);}
+.fadhd{padding:.5rem .9rem;border-radius:8px;font-size:.8rem;line-height:1.7;margin-bottom:.8rem;}
+.f1 .fadhd{background:rgba(42,89,64,.07);border-left:3px solid var(--forest);}
+.f2 .fadhd{background:rgba(27,95,122,.07);border-left:3px solid var(--sky);}
+.f3 .fadhd{background:rgba(184,134,30,.07);border-left:3px solid var(--gold);}
+.f4 .fadhd{background:rgba(94,69,144,.07);border-left:3px solid var(--violet);}
+.fadhd-lbl{font-family:'DM Mono',monospace;font-size:.57rem;letter-spacing:.15em;margin-bottom:.25rem;}
+.f1 .fadhd-lbl{color:var(--forest);}
+.f2 .fadhd-lbl{color:var(--sky);}
+.f3 .fadhd-lbl{color:var(--gold);}
+.f4 .fadhd-lbl{color:var(--violet);}
+.fchips{display:flex;flex-wrap:wrap;gap:.35rem;}
+.fchip{padding:.12rem .55rem;border-radius:10px;font-size:.61rem;background:var(--warm);border:1px solid var(--border);color:var(--muted);}
+
+/* ── BRAIN ENERGY ── */
+.be-grid{
+  display:grid;grid-template-columns:auto 1fr;gap:3rem;
+  align-items:start;margin-top:3rem;
+}
+@media(max-width:700px){.be-grid{grid-template-columns:1fr;}}
+.be-portrait{
+  width:160px;flex-shrink:0;
+  background:linear-gradient(135deg,var(--sky),var(--forest));
+  border-radius:var(--r);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:2rem 1rem;text-align:center;
+}
+.be-portrait .icon{font-size:3rem;margin-bottom:.8rem;}
+.be-portrait .name{font-family:'Playfair Display',serif;font-size:.9rem;color:#fff;font-weight:700;margin-bottom:.2rem;}
+.be-portrait .univ{font-family:'DM Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.6);letter-spacing:.1em;line-height:1.6;}
+.be-theory h3{font-family:'Noto Serif KR',serif;font-size:1.2rem;font-weight:600;color:#fff;margin-bottom:.8rem;}
+.be-theory p{font-size:.88rem;line-height:2;color:rgba(255,255,255,.7);margin-bottom:1rem;}
+.be-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin-top:1.5rem;}
+@media(max-width:700px){.be-pillars{grid-template-columns:1fr 1fr;}}
+.be-pillar{
+  padding:1rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:8px;text-align:center;
+}
+.be-pillar-icon{font-size:1.3rem;margin-bottom:.4rem;}
+.be-pillar-title{font-family:'Noto Serif KR',serif;font-size:.82rem;font-weight:600;color:#fff;margin-bottom:.3rem;}
+.be-pillar-body{font-size:.72rem;color:rgba(255,255,255,.55);line-height:1.7;}
+
+/* ── LAW PANEL ── */
+.law-panel{
+  background:#fff;border:2px solid var(--forest);border-radius:var(--r);
+  padding:2.5rem;margin-top:3rem;position:relative;overflow:hidden;
+}
+.law-panel::before{
+  content:'法';
+  position:absolute;right:1rem;top:.5rem;
+  font-family:'Noto Serif KR',serif;font-size:8rem;
+  color:rgba(42,89,64,.04);font-weight:700;line-height:1;
+}
+.law-title{
+  display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;
+}
+.law-badge{
+  padding:.3rem .9rem;border-radius:20px;
+  background:var(--forest);color:#fff;
+  font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.15em;
+  white-space:nowrap;
+}
+.law-name{font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:600;color:var(--forest);}
+.law-def{
+  padding:1rem 1.5rem;background:rgba(42,89,64,.05);
+  border-left:3px solid var(--forest);border-radius:0 8px 8px 0;
+  font-size:.9rem;line-height:2;color:var(--ink);margin-bottom:1.5rem;
+}
+.law-items{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;}
+@media(max-width:700px){.law-items{grid-template-columns:1fr;}}
+.law-item{
+  padding:1rem;background:rgba(42,89,64,.04);
+  border-radius:8px;border:1px solid rgba(42,89,64,.12);
+}
+.law-item-title{font-family:'Noto Serif KR',serif;font-size:.85rem;font-weight:600;color:var(--forest);margin-bottom:.4rem;}
+.law-item-body{font-size:.78rem;line-height:1.8;color:var(--muted);}
+
+/* ── JOURNEY MAP ── */
+.journey{margin-top:3rem;position:relative;}
+.jline{position:absolute;top:36px;left:0;right:0;height:2px;background:linear-gradient(to right,var(--forest),var(--sky),var(--gold),var(--rose),var(--violet));opacity:.2;z-index:0;}
+.jstops{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;position:relative;z-index:1;}
+@media(max-width:700px){.jstops{grid-template-columns:1fr 1fr;}.jline{display:none;}}
+.jstop{text-align:center;padding:0 .5rem;}
+.jdot{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.1rem;box-shadow:0 4px 14px rgba(0,0,0,.1);}
+.jstop:nth-child(1) .jdot{background:var(--forest);color:#fff;}
+.jstop:nth-child(2) .jdot{background:var(--sky);color:#fff;}
+.jstop:nth-child(3) .jdot{background:var(--gold);color:#fff;}
+.jstop:nth-child(4) .jdot{background:var(--rose);color:#fff;}
+.jstop:nth-child(5) .jdot{background:var(--violet);color:#fff;}
+.jtitle{font-family:'Noto Serif KR',serif;font-size:.88rem;font-weight:600;color:var(--ink);margin-bottom:.3rem;}
+.jbody{font-size:.73rem;line-height:1.75;color:var(--muted);}
+
+/* ── EVIDENCE ── */
+.ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem;}
+@media(max-width:800px){.ev-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:500px){.ev-grid{grid-template-columns:1fr;}}
+.ev{padding:1.6rem;border-radius:var(--r);border:1px solid var(--border);background:#fff;transition:transform .3s,box-shadow .3s;}
+.ev:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.07);}
+.ev-icon{font-size:1.5rem;margin-bottom:.7rem;}
+.ev-src{font-family:'DM Mono',monospace;font-size:.57rem;letter-spacing:.15em;color:var(--forest);margin-bottom:.4rem;}
+.ev-title{font-family:'Noto Serif KR',serif;font-size:.92rem;font-weight:600;color:var(--ink);margin-bottom:.5rem;line-height:1.4;}
+.ev-body{font-size:.77rem;line-height:1.85;color:var(--muted);}
+
+/* ── BIG CALLOUT ── */
+.callout{padding:6rem 0;text-align:center;background:var(--forest2);position:relative;overflow:hidden;}
+.callout::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(212,168,50,.07),transparent 70%);}
+.callout blockquote{font-family:'Noto Serif KR',serif;font-size:clamp(1.1rem,2.8vw,1.8rem);font-weight:300;line-height:2;max-width:680px;margin:0 auto 1.3rem;color:rgba(255,255,255,.9);}
+.callout blockquote strong{color:var(--gold2);}
+.callout cite{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.18em;color:rgba(255,255,255,.4);font-style:normal;}
+.cta-btn{display:inline-block;margin-top:2rem;padding:.75rem 2.2rem;border-radius:30px;background:var(--gold);color:#fff;text-decoration:none;font-size:.8rem;letter-spacing:.12em;font-family:'DM Mono',monospace;transition:background .3s,transform .2s;}
+.cta-btn:hover{background:var(--gold2);transform:translateY(-2px);}
+
+/* ── PROGRAM TABLE ── */
+.tbl-wrap{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;background:#fff;margin-top:2.5rem;}
+table{width:100%;border-collapse:collapse;}
+thead th{padding:.85rem 1.2rem;font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.15em;color:#fff;background:var(--forest);text-align:left;}
+tbody td{padding:.85rem 1.2rem;font-size:.82rem;border-bottom:1px solid var(--border);color:var(--muted);vertical-align:top;line-height:1.7;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover td{background:rgba(42,89,64,.03);}
+td:first-child{font-family:'Noto Serif KR',serif;font-weight:600;color:var(--ink);white-space:nowrap;}
+
+/* ── FOOTER ── */
+footer{padding:3rem 2rem;text-align:center;border-top:1px solid var(--border);font-size:.73rem;color:var(--muted);line-height:2.3;background:var(--cream);}
+footer a{color:var(--forest);text-decoration:none;}
+footer strong{color:var(--ink);}
+
+/* ── NEURO FEEDBACK ── */
+.nf-hero{
+  background:linear-gradient(135deg,#0d1f2d 0%,#1b3a4b 40%,#0f2d1e 100%);
+  padding:5rem 0;
+}
+.nf-title-block{text-align:center;margin-bottom:3rem;}
+.nf-supertag{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.3em;color:rgba(0,210,200,.6);text-transform:uppercase;margin-bottom:.8rem;}
+.nf-main-title{font-family:'Noto Serif KR',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;color:#fff;margin-bottom:.8rem;line-height:1.2;}
+.nf-main-title .hl{color:#00d4c8;}
+.nf-lead{font-size:.95rem;line-height:2;color:rgba(255,255,255,.65);max-width:680px;margin:0 auto;}
+
+/* Brain wave animated display */
+.brainwave-display{
+  background:rgba(0,0,0,.3);border:1px solid rgba(0,210,200,.15);
+  border-radius:var(--r);padding:2rem;margin-bottom:2.5rem;overflow:hidden;
+}
+.bw-row{margin-bottom:1.2rem;}
+.bw-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem;}
+.bw-lbl{font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.15em;}
+.bw-val{font-family:'DM Mono',monospace;font-size:.65rem;padding:.15rem .5rem;border-radius:4px;}
+.bw-track{height:48px;background:rgba(0,0,0,.3);border-radius:6px;overflow:hidden;position:relative;}
+.bw-svg{width:200%;height:100%;}
+.bw-anim-1{animation:bwscroll 4s linear infinite;}
+.bw-anim-2{animation:bwscroll 2.5s linear infinite;}
+.bw-anim-3{animation:bwscroll 1.8s linear infinite;}
+.bw-anim-4{animation:bwscroll 1.2s linear infinite;}
+.bw-anim-5{animation:bwscroll 0.8s linear infinite;}
+@keyframes bwscroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* Spectrum analyzer */
+.spectrum-analyzer{
+  background:rgba(0,0,0,.35);border:1px solid rgba(0,210,200,.12);
+  border-radius:var(--r);padding:2rem;
+}
+.sa-title{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.2em;color:rgba(0,210,200,.7);margin-bottom:1.5rem;text-align:center;}
+.sa-bars{display:flex;justify-content:center;align-items:flex-end;gap:1.2rem;height:120px;margin-bottom:1rem;}
+.sa-bar-group{display:flex;flex-direction:column;align-items:center;gap:4px;}
+.sa-bars-inner{display:flex;gap:4px;align-items:flex-end;height:100px;}
+.sa-bar{width:18px;border-radius:3px 3px 0 0;position:relative;transition:height .5s ease;}
+.sa-bar::after{content:'';position:absolute;top:0;left:0;right:0;height:30%;border-radius:3px 3px 0 0;background:rgba(255,255,255,.25);}
+.sa-bar.adhd{background:linear-gradient(to top,#9e3a3a,#e07a80);}
+.sa-bar.fawa{background:linear-gradient(to top,#2a5940,#5dba80);}
+.sa-bar.nfb{background:linear-gradient(to top,#1b5f7a,#3ab0d8);}
+.sa-blabel{font-family:'DM Mono',monospace;font-size:.6rem;color:rgba(255,255,255,.6);text-align:center;margin-top:.4rem;}
+.sa-hz{font-size:.55rem;color:rgba(255,255,255,.35);text-align:center;}
+.sa-legend{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-top:1rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08);}
+.sa-leg{display:flex;align-items:center;gap:.4rem;font-size:.7rem;color:rgba(255,255,255,.6);}
+.sa-dot{width:9px;height:9px;border-radius:50%;}
+
+/* NFB process flow */
+.nfb-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:2.5rem;}
+@media(max-width:700px){.nfb-flow{grid-template-columns:1fr 1fr;}}
+@media(max-width:400px){.nfb-flow{grid-template-columns:1fr;}}
+.nfb-step{
+  padding:1.8rem 1.5rem;text-align:center;
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
+  position:relative;transition:background .3s;
+}
+.nfb-step:hover{background:rgba(0,210,200,.06);}
+.nfb-step-num{
+  font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.2em;
+  color:rgba(0,210,200,.5);margin-bottom:.6rem;
+}
+.nfb-step-icon{font-size:1.8rem;margin-bottom:.6rem;}
+.nfb-step-title{font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:#fff;margin-bottom:.5rem;}
+.nfb-step-body{font-size:.75rem;line-height:1.8;color:rgba(255,255,255,.55);}
+.nfb-arrow{display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:rgba(0,210,200,.4);}
+
+/* Neuroharmony comparison table */
+.nh-table-wrap{
+  background:rgba(0,0,0,.3);border:1px solid rgba(0,210,200,.12);
+  border-radius:var(--r);overflow:hidden;margin-top:2.5rem;
+}
+.nh-table{width:100%;border-collapse:collapse;}
+.nh-table thead th{
+  padding:.85rem 1.2rem;font-family:'DM Mono',monospace;font-size:.58rem;
+  letter-spacing:.15em;background:rgba(0,210,200,.15);color:rgba(0,210,200,.9);
+  text-align:left;border-bottom:1px solid rgba(0,210,200,.15);
+}
+.nh-table tbody td{
+  padding:.85rem 1.2rem;font-size:.82rem;
+  border-bottom:1px solid rgba(255,255,255,.05);
+  color:rgba(255,255,255,.6);vertical-align:top;line-height:1.7;
+}
+.nh-table tbody tr:last-child td{border-bottom:none;}
+.nh-table tbody tr:hover td{background:rgba(0,210,200,.04);}
+.nh-table td:first-child{font-family:'Noto Serif KR',serif;font-weight:600;color:#fff;white-space:nowrap;}
+.good{color:#5dba80;}
+.bad{color:#e07a80;}
+.mid{color:#d4a832;}
+
+/* NFB evidence grid */
+.nfb-ev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem;}
+@media(max-width:800px){.nfb-ev-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:500px){.nfb-ev-grid{grid-template-columns:1fr;}}
+.nfb-ev{
+  padding:1.5rem;border-radius:var(--r);
+  background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
+  transition:border-color .3s,transform .3s;
+}
+.nfb-ev:hover{border-color:rgba(0,210,200,.3);transform:translateY(-3px);}
+.nfb-ev-icon{font-size:1.4rem;margin-bottom:.6rem;}
+.nfb-ev-src{font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.15em;color:rgba(0,210,200,.7);margin-bottom:.4rem;}
+.nfb-ev-title{font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:#fff;margin-bottom:.45rem;line-height:1.4;}
+.nfb-ev-body{font-size:.76rem;line-height:1.85;color:rgba(255,255,255,.55);}
+
+/* Neuroharmony integration panel */
+.nh-integration{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;
+  background:rgba(0,210,200,.1);border-radius:var(--r);
+  overflow:hidden;margin-top:2.5rem;
+}
+@media(max-width:700px){.nh-integration{grid-template-columns:1fr;}}
+.nh-int-cell{
+  padding:2rem;background:#0d1f2d;text-align:center;
+}
+.nh-int-icon{font-size:2.2rem;margin-bottom:.8rem;}
+.nh-int-label{font-family:'DM Mono',monospace;font-size:.58rem;letter-spacing:.2em;color:rgba(0,210,200,.6);margin-bottom:.5rem;}
+.nh-int-title{font-family:'Noto Serif KR',serif;font-size:1rem;font-weight:600;color:#fff;margin-bottom:.7rem;}
+.nh-int-body{font-size:.8rem;line-height:1.9;color:rgba(255,255,255,.55);}
+.nh-int-badge{margin-top:.8rem;display:inline-block;padding:.2rem .7rem;border-radius:12px;font-family:'DM Mono',monospace;font-size:.6rem;border:1px solid;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">치유관광의 시대</span>
+  <ul class="nav-links">
+    <li><a href="#juyeok">주역과 여행</a></li>
+    <li><a href="#yukyo">6효 뇌파</a></li>
+    <li><a href="#igeun">이근원통</a></li>
+    <li><a href="#brain">브레인에너지</a></li>
+    <li><a href="#law">치유관광법</a></li>
+    <li><a href="#grit">그릿행복여행</a></li>
+    <li><a href="#fawa">FAWA</a></li>
+    <li><a href="#neuro">뉴로하모니</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-bg-hex"></div>
+  <div class="hero-glow"></div>
+  <p class="hero-eyebrow">K-MediWell 그릿행복여행 · 이용근 교수</p>
+  <h1 class="hero-h1">
+    <span class="gold">치유관광의 시대</span>가 열린다<br>
+    밖으로의 여행과 안으로의 명상
+  </h1>
+  <div class="hero-divider"></div>
+  <p class="hero-h2">주역의 旅(여) × 이근원통(耳根圓通) × 브레인에너지 × 뉴로하모니 × 그릿행복여행</p>
+  <p class="hero-lead">
+    주역은 3천 년 전에 이미 여행(旅)을 통한 변화와 치유를 설했습니다.<br>
+    능엄경은 귀를 돌이켜 내면을 듣는 이근원통으로 ADHD와 스트레스를 치유합니다.<br>
+    하버드 팔머 교수의 브레인에너지 이론은 미토콘드리아라는 과학적 열쇠를 더합니다.<br>
+    치유관광산업육성법은 이 모든 지혜를 제도적 기반 위에 세웁니다.
+  </p>
+  <div class="hero-pills">
+    <span class="hpill">주역 旅卦(여괘)</span>
+    <span class="hpill">이근원통(耳根圓通)</span>
+    <span class="hpill">브레인에너지</span>
+    <span class="hpill">치유관광산업육성법</span>
+    <span class="hpill">그릿행복여행</span>
+    <span class="hpill">FAWA 선명상</span>
+    <span class="hpill">뉴로하모니 · qEEG</span>
+    <span class="hpill">뉴로피드백</span>
+  </div>
+  <div class="hero-scroll"><span>SCROLL</span></div>
+</div>
+
+<!-- ============================================================
+     PART 1 : 주역의 여행 철학
+     ============================================================ -->
+<div class="sec" id="juyeok">
+  <div class="wrap">
+    <p class="tag tag-gold">// 01 · 周易 旅卦 — 주역 속의 여행 철학</p>
+    <h2 class="h2">주역(周易)이 말하는 여행<br><em>旅(여) — 변화와 치유의 길</em></h2>
+    <p class="lead">주역(周易, I Ching)은 3천 년의 지혜를 담은 동양 최고의 변화 철학서입니다. 64괘 중 제56괘 <strong>화산려(火山旅)</strong>는 여행(旅)을 단순한 이동이 아닌, 자아를 내려놓고 변화의 흐름에 순응하는 치유의 과정으로 설합니다. 이는 현대 치유관광의 본질과 놀랍도록 일치합니다.</p>
+
+    <div class="hexagram-wrap" style="margin-top:2.5rem;">
+      <div class="hex-symbol">
+        <!-- 화산려 괘 (위: 이괘, 아래: 간괘) -->
+        <div class="hex-line"></div><!-- 상9 양 -->
+        <div class="hex-line broken"></div><!-- 6 음 -->
+        <div class="hex-line"></div><!-- 양 -->
+        <div class="hex-line broken"></div><!-- 음 -->
+        <div class="hex-line broken"></div><!-- 음 -->
+        <div class="hex-line"></div><!-- 초 양 -->
+        <div class="hex-name">旅</div>
+        <div class="hex-ename">화산려 · 第56卦</div>
+      </div>
+      <div class="hex-content">
+        <h3>旅之時義大矣哉 — 여행의 때와 의미는 위대하다</h3>
+        <p>
+          <strong>괘사(卦辭):</strong> "旅 小亨 旅貞吉(여 소형 여정길)" — 여행은 작은 형통이니, 여행의 바름을 지키면 길하다. 여괘는 불(離)이 산(艮) 위에 있는 형상입니다. 산은 고요히 머무르는 것이고, 불은 쉬지 않고 타오르며 이동합니다. 이 두 힘의 역동적 균형이 치유 여행의 본질입니다.
+        </p>
+        <p style="margin-top:1rem;">
+          주역은 여행자에게 <strong>유순하고 겸허한 덕(柔順謙下)</strong>을 요구합니다. 강압이 아닌 흐름을 따르는 자세—이것이 ADHD와 스트레스를 치유하는 여행의 핵심 태도입니다. 밖으로의 여행(그릿행복여행)은 내면의 경직된 자아를 자연 앞에 내려놓는 것이며, 안으로의 여행(FAWA 선명상)은 귀를 돌이켜 자성(自性)을 찾는 것입니다.
+        </p>
+        <div class="qblock" style="margin-top:1.5rem;">
+          <p>"旅卦의 때와 의미는 위대하다! 나그네의 길에서 요구되는 것은 유순함과 겸허함이니, 고집을 내려놓고 변화의 흐름에 자신을 맡길 때 비로소 치유가 시작된다."</p>
+          <cite>— 주역 화산려(火山旅) · 彖傳 해설</cite>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-top:2rem;">
+      <div class="card">
+        <div class="ci">🔥</div>
+        <div class="ctag tag-gold">// 이(離) · 불</div>
+        <div class="ctitle">변화와 밝음</div>
+        <div class="cbody">불은 쉬지 않고 움직이며 어둠을 밝힙니다. 여행을 떠나는 행위 자체가 고착된 ADHD 패턴에서 벗어나 새로운 신경 연결을 촉진하는 불의 에너지입니다.</div>
+        <span class="chip" style="background:rgba(184,134,30,.1);color:var(--gold);">밖으로 · 그릿행복여행</span>
+      </div>
+      <div class="card">
+        <div class="ci">🏔️</div>
+        <div class="ctag tag-forest">// 간(艮) · 산</div>
+        <div class="ctitle">고요와 머무름</div>
+        <div class="cbody">산은 흔들리지 않고 고요히 자리를 지킵니다. 내면의 명상 수행—FAWA의 지켜보기(Watch)—이 바로 이 산의 고요함입니다. 감각의 폭풍 속에서 흔들리지 않는 관조입니다.</div>
+        <span class="chip" style="background:rgba(42,89,64,.1);color:var(--forest);">안으로 · FAWA 선명상</span>
+      </div>
+      <div class="card">
+        <div class="ci">☯️</div>
+        <div class="ctag tag-sky">// 음양(陰陽) · 변역</div>
+        <div class="ctitle">변화의 법칙</div>
+        <div class="cbody">주역의 핵심은 변역(變易)—모든 것은 변화한다. ADHD와 스트레스 역시 고정된 실체가 아니라 변화하는 현상입니다. 뇌의 신경가소성이 이 변역의 과학적 근거입니다.</div>
+        <span class="chip" style="background:rgba(27,95,122,.1);color:var(--sky);">신경가소성 · 치유 가능성</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sdiv"><div class="sline"></div><div class="sglyph">耳根圓通</div><div class="sline"></div></div>
+
+<!-- ============================================================
+     화산려괘 6효 × 여행 × 뇌파 변화
+     ============================================================ -->
+<div style="background:linear-gradient(180deg,var(--cream) 0%,var(--warm) 100%);padding:6rem 0;" id="yukyo">
+  <div class="wrap">
+    <p class="tag tag-gold">// 01-B · 火山旅 六爻 — 화산려괘 6효의 여행과 뇌파 변화</p>
+    <h2 class="h2">화산려(火山旅) 6효<br><em>여행 6단계</em>가 뇌파를 바꾼다</h2>
+    <p class="lead">주역 화산려괘의 여섯 효(爻)는 나그네(여행자)가 출발부터 귀환까지 겪는 심리적·존재론적 변화의 정밀한 지도입니다. 각 효는 현대 뇌과학이 확인하는 특정 뇌파 상태와 정확히 대응하며, ADHD와 만성 스트레스를 치유하는 과정을 3천 년 전 주역은 이미 설파했습니다.</p>
+
+    <!-- 괘 개요 -->
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:start;margin:2.5rem 0;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:2.5rem;">
+      <div style="text-align:center;flex-shrink:0;">
+        <div style="display:flex;flex-direction:column;gap:7px;align-items:center;margin-bottom:.8rem;">
+          <div style="width:56px;height:6px;background:var(--ink);border-radius:2px;"></div>
+          <div style="width:56px;height:6px;display:flex;gap:6px;"><div style="flex:1;height:6px;background:var(--ink);border-radius:2px;"></div><div style="flex:1;height:6px;background:var(--ink);border-radius:2px;"></div></div>
+          <div style="width:56px;height:6px;background:var(--ink);border-radius:2px;"></div>
+          <div style="width:56px;height:1px;background:var(--border);margin:3px 0;"></div>
+          <div style="width:56px;height:6px;display:flex;gap:6px;"><div style="flex:1;height:6px;background:var(--ink);border-radius:2px;"></div><div style="flex:1;height:6px;background:var(--ink);border-radius:2px;"></div></div>
+          <div style="width:56px;height:6px;display:flex;gap:6px;"><div style="flex:1;height:6px;background:var(--ink);border-radius:2px;"></div><div style="flex:1;height:6px;background:var(--ink);border-radius:2px;"></div></div>
+          <div style="width:56px;height:6px;background:var(--ink);border-radius:2px;"></div>
+        </div>
+        <div style="font-family:'Noto Serif KR',serif;font-size:1.5rem;font-weight:700;color:var(--gold);">旅</div>
+        <div style="font-size:.65rem;color:var(--muted);letter-spacing:.1em;">화산려 · 第56卦</div>
+        <div style="margin-top:.6rem;font-size:.68rem;color:var(--muted);line-height:1.8;">上 離(불·밝음·의식)<br>下 艮(산·고요·신체)</div>
+      </div>
+      <div>
+        <div style="font-family:'Noto Serif KR',serif;font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:.7rem;">旅 小亨 旅貞吉 — 괘사(卦辭)</div>
+        <p style="font-size:.9rem;line-height:2;color:var(--muted);margin-bottom:1rem;">"여행은 작은 형통이니, 여행의 바름(貞)을 지키면 길(吉)하다." 화산려괘의 6효는 나그네의 여정 6국면을 그립니다. 위의 <strong>이(離·불·밝음)</strong>는 의식(心)을, 아래의 <strong>간(艮·산·고요)</strong>은 신체(身)를 상징합니다—이것이 FAWA 심신쌍수(心身雙修)의 괘상입니다. 음효는 유순하게 흐름에 따르는 효들이고(육이·육오·초육), 양효는 강한 에너지로 움직이는 효들입니다(구삼·구사·상구). 여행의 길함은 음효(유순·겸하)에서 얻어집니다.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+          <span style="padding:.2rem .65rem;border-radius:10px;font-size:.65rem;background:rgba(184,134,30,.1);border:1px solid rgba(184,134,30,.2);color:var(--gold);">旅之時義大矣哉</span>
+          <span style="padding:.2rem .65rem;border-radius:10px;font-size:.65rem;background:rgba(42,89,64,.08);border:1px solid rgba(42,89,64,.15);color:var(--forest);">柔順謙下(유순겸하)</span>
+          <span style="padding:.2rem .65rem;border-radius:10px;font-size:.65rem;background:rgba(27,95,122,.08);border:1px solid rgba(27,95,122,.15);color:var(--sky);">止而麗乎明</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6효 상세 -->
+    <div style="display:flex;flex-direction:column;gap:3px;margin-top:2rem;">
+
+      <!-- 초육 -->
+      <div style="display:grid;grid-template-columns:200px 1fr;gap:0;border-radius:var(--r);overflow:hidden;">
+        <div style="padding:2rem 1.5rem;background:linear-gradient(135deg,#4a2020,#5e2a2a);display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.18em;color:rgba(255,200,200,.5);margin-bottom:.4rem;">初六 · 효 1</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.2rem;">초육(初六)</div>
+          <div style="font-size:.7rem;color:rgba(255,255,255,.5);font-style:italic;margin-bottom:.5rem;">旅瑣瑣 斯其所取災</div>
+          <div style="font-size:.72rem;color:rgba(255,180,180,.85);line-height:1.6;">사소한 것에 집착하여 재앙을 부른다</div>
+          <div style="display:flex;gap:5px;margin-top:.7rem;"><div style="flex:1;height:4px;background:rgba(255,255,255,.35);border-radius:2px;"></div><div style="flex:1;height:4px;background:rgba(255,255,255,.35);border-radius:2px;"></div></div>
+          <div style="font-size:.58rem;color:rgba(255,255,255,.3);margin-top:.3rem;">음효(陰爻) · 출발 미결</div>
+        </div>
+        <div style="padding:1.8rem 2.2rem;background:#fff;border:1px solid var(--border);border-left:none;border-radius:0 var(--r) var(--r) 0;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:.4rem;">🗺️ 여행 의미</div>
+              <p style="font-size:.81rem;line-height:1.9;color:var(--muted);">여행을 시작하기 전 기존의 집착과 습관에서 벗어나지 못하는 상태. 일상의 자아를 그대로 들고 떠나는 여행은 진정한 변화를 이끌지 못합니다. 고집과 편견을 내려놓는 것이 치유 여행의 첫 과제입니다.</p>
+            </div>
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:var(--rose);margin-bottom:.4rem;">🧠 뇌파 상태</div>
+              <p style="font-size:.81rem;line-height:1.9;color:var(--muted);">High Beta(25-30Hz) 과잉 · DMN 과활성 · 코르티솔 상승. ADHD의 전형적 투쟁-회피 반응. 과거 후회와 미래 불안으로 전두엽 에너지 낭비. 미토콘드리아 산화 스트레스 극대화.</p>
+              <div style="margin-top:.5rem;display:flex;gap:.3rem;flex-wrap:wrap;">
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(158,58,58,.1);border:1px solid rgba(158,58,58,.2);color:var(--rose);">High β ↑↑</span>
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(158,58,58,.1);border:1px solid rgba(158,58,58,.2);color:var(--rose);">DMN 과활성</span>
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(158,58,58,.1);border:1px solid rgba(158,58,58,.2);color:var(--rose);">코르티솔 ↑</span>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:.9rem;padding:.5rem .9rem;background:rgba(42,89,64,.05);border-left:3px solid var(--forest);border-radius:0 6px 6px 0;font-size:.76rem;color:var(--muted);"><strong style="color:var(--forest);">처방:</strong> Pre-FAWA 환경 정렬 · 디지털 디톡스 · qEEG 사전 기준치 측정</div>
+        </div>
+      </div>
+
+      <!-- 육이 -->
+      <div style="display:grid;grid-template-columns:200px 1fr;gap:0;border-radius:var(--r);overflow:hidden;">
+        <div style="padding:2rem 1.5rem;background:linear-gradient(135deg,#2a4a20,#35602a);display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.18em;color:rgba(200,255,200,.5);margin-bottom:.4rem;">六二 · 효 2</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.2rem;">육이(六二)</div>
+          <div style="font-size:.7rem;color:rgba(255,255,255,.5);font-style:italic;margin-bottom:.5rem;">旅即次 懷其資 得童僕貞</div>
+          <div style="font-size:.72rem;color:rgba(200,255,200,.85);line-height:1.6;">여관에 안착하고 내적 자원을 얻는다</div>
+          <div style="display:flex;gap:5px;margin-top:.7rem;"><div style="flex:1;height:4px;background:rgba(255,255,255,.35);border-radius:2px;"></div><div style="flex:1;height:4px;background:rgba(255,255,255,.35);border-radius:2px;"></div></div>
+          <div style="font-size:.58rem;color:rgba(255,255,255,.3);margin-top:.3rem;">음효(陰爻) · 중정(中正) · 길</div>
+        </div>
+        <div style="padding:1.8rem 2.2rem;background:#fff;border:1px solid var(--border);border-left:none;border-radius:0 var(--r) var(--r) 0;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:.4rem;">🗺️ 여행 의미</div>
+              <p style="font-size:.81rem;line-height:1.9;color:var(--muted);">"나그네가 여관에 들어 노자를 지니고 신실한 동복을 얻었다." 자연 속 첫 안착. 유순하고 겸허한 태도로 환경에 적응할 때 예상치 못한 도움과 연결이 생깁니다. 육이는 중정(中正)—중간에 바르게 자리한—이라 화산려 6효 중 가장 길한 효입니다.</p>
+            </div>
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:var(--forest);margin-bottom:.4rem;">🧠 뇌파 변화</div>
+              <p style="font-size:.81rem;line-height:1.9;color:var(--muted);">Alpha(8-12Hz) 증가 시작 · HRV 안정화. 자연 경관에 안착하며 이완 반응이 시작. 섬엽(Insula) 내수용감각 활성화. 코르티솔 감소→미토콘드리아 회복 시작.</p>
+              <div style="margin-top:.5rem;display:flex;gap:.3rem;flex-wrap:wrap;">
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(42,89,64,.1);border:1px solid rgba(42,89,64,.2);color:var(--forest);">α 증가↑</span>
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(42,89,64,.1);border:1px solid rgba(42,89,64,.2);color:var(--forest);">HRV 안정</span>
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(42,89,64,.1);border:1px solid rgba(42,89,64,.2);color:var(--forest);">코르티솔↓</span>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:.9rem;padding:.5rem .9rem;background:rgba(42,89,64,.05);border-left:3px solid var(--forest);border-radius:0 6px 6px 0;font-size:.76rem;color:var(--muted);"><strong style="color:var(--forest);">처방:</strong> FAWA 따(Follow) · 자연 경관·맨발걷기 · qEEG 1차 측정</div>
+        </div>
+      </div>
+
+      <!-- 구삼 -->
+      <div style="display:grid;grid-template-columns:200px 1fr;gap:0;border-radius:var(--r);overflow:hidden;">
+        <div style="padding:2rem 1.5rem;background:linear-gradient(135deg,#4a3a10,#6a5218);display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.18em;color:rgba(255,240,180,.5);margin-bottom:.4rem;">九三 · 효 3</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.2rem;">구삼(九三)</div>
+          <div style="font-size:.7rem;color:rgba(255,255,255,.5);font-style:italic;margin-bottom:.5rem;">旅焚其次 喪其童僕 貞厲</div>
+          <div style="font-size:.72rem;color:rgba(255,240,180,.85);line-height:1.6;">여관을 태우고 동복을 잃으니 위태롭다</div>
+          <div style="width:56px;height:5px;background:rgba(255,255,255,.6);border-radius:2px;margin-top:.7rem;"></div>
+          <div style="font-size:.58rem;color:rgba(255,255,255,.3);margin-top:.3rem;">양효(陽爻) · 과강(過剛) · 위기</div>
+        </div>
+        <div style="padding:1.8rem 2.2rem;background:#fff;border:1px solid var(--border);border-left:none;border-radius:0 var(--r) var(--r) 0;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:.4rem;">🗺️ 여행 의미</div>
+              <p style="font-size:.81rem;line-height:1.9;color:var(--muted);">"나그네가 여관을 태우고 동복을 잃었다." 과도한 자기 강함(九·양효)이 충돌을 일으킵니다. 여행자가 자신의 기준을 고집할 때 의지처(숙소)와 도움(동복)을 잃습니다. 이 위기가 진정한 자아 탈피와 변화의 계기가 됩니다.</p>
+            </div>
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:var(--gold);margin-bottom:.4rem;">🧠 뇌파 위기·전환점</div>
+              <p style="font-size:.81rem;line-height:1.9;color:var(--muted);">Theta(4-8Hz) 급증 · 예측 오류(Prediction Error) 급증. 자아가 새로운 환경에 저항하는 신경학적 위기. 이 불편함이 신경가소성 변화의 문을 엽니다. 뉴로피드백 Theta 억제 훈련이 가장 효과적인 지점.</p>
+              <div style="margin-top:.5rem;display:flex;gap:.3rem;flex-wrap:wrap;">
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(184,134,30,.1);border:1px solid rgba(184,134,30,.2);color:var(--gold);">θ 급증</span>
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(184,134,30,.1);border:1px solid rgba(184,134,30,.2);color:var(--gold);">예측 오류↑</span>
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(184,134,30,.1);border:1px solid rgba(184,134,30,.2);color:var(--gold);">변화 임계점</span>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:.9rem;padding:.5rem .9rem;background:rgba(184,134,30,.05);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-size:.76rem;color:var(--muted);"><strong style="color:var(--gold);">처방:</strong> FAWA 몰(Absorb) · 심폐 결합 호흡 훈련 · 뉴로피드백 Theta 억제 집중 훈련</div>
+        </div>
+      </div>
+
+      <!-- 구사 -->
+      <div style="display:grid;grid-template-columns:200px 1fr;gap:0;border-radius:var(--r);overflow:hidden;">
+        <div style="padding:2rem 1.5rem;background:linear-gradient(135deg,#1a3a5e,#1e4a72);display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.18em;color:rgba(180,220,255,.5);margin-bottom:.4rem;">九四 · 효 4</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.2rem;">구사(九四)</div>
+          <div style="font-size:.7rem;color:rgba(255,255,255,.5);font-style:italic;margin-bottom:.5rem;">旅于處 得其資斧 我心不快</div>
+          <div style="font-size:.72rem;color:rgba(180,220,255,.85);line-height:1.6;">처소를 얻었으나 마음이 쾌하지 않다</div>
+          <div style="width:56px;height:5px;background:rgba(255,255,255,.6);border-radius:2px;margin-top:.7rem;"></div>
+          <div style="font-size:.58rem;color:rgba(255,255,255,.3);margin-top:.3rem;">양효(陽爻) · 외괘 진입 · 과도기</div>
+        </div>
+        <div style="padding:1.8rem 2.2rem;background:#fff;border:1px solid var(--border);border-left:none;border-radius:0 var(--r) var(--r) 0;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:.4rem;">🗺️ 여행 의미</div>
+              <p style="font-size:.81rem;line-height:1.9;color:var(--muted);">"나그네가 처소를 얻고 재물과 도끼를 얻었으나 내 마음은 쾌하지 않다." 물질적 안정은 얻었지만 아직 깊은 내적 평화에 이르지 못한 과도기. 겉으로는 안정되었지만 "왜 여전히 불편한가"를 내면에서 물어보기 시작합니다.</p>
+            </div>
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:var(--sky);margin-bottom:.4rem;">🧠 뇌파 과도기</div>
+              <p style="font-size:.81rem;line-height:1.9;color:var(--muted);">Alpha-Theta 경계(8-10Hz) · dlPFC 메타인지 발동. "내 마음이 왜 불쾌한가"를 관조하기 시작—이근원통 반문(反聞)의 신경학적 등장. Alpha/Theta 뉴로피드백이 이 내면 탐색을 가속합니다.</p>
+              <div style="margin-top:.5rem;display:flex;gap:.3rem;flex-wrap:wrap;">
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(27,95,122,.1);border:1px solid rgba(27,95,122,.2);color:var(--sky);">α-θ 경계</span>
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(27,95,122,.1);border:1px solid rgba(27,95,122,.2);color:var(--sky);">dlPFC 활성</span>
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(27,95,122,.1);border:1px solid rgba(27,95,122,.2);color:var(--sky);">메타인지</span>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:.9rem;padding:.5rem .9rem;background:rgba(27,95,122,.05);border-left:3px solid var(--sky);border-radius:0 6px 6px 0;font-size:.76rem;color:var(--muted);"><strong style="color:var(--sky);">처방:</strong> FAWA 지(Watch) · 이근원통 반문(反聞) · 뉴로피드백 Alpha/Theta 훈련</div>
+        </div>
+      </div>
+
+      <!-- 육오 -->
+      <div style="display:grid;grid-template-columns:200px 1fr;gap:0;border-radius:var(--r);overflow:hidden;">
+        <div style="padding:2rem 1.5rem;background:linear-gradient(135deg,#3a2a5e,#4a3578);display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.18em;color:rgba(220,200,255,.5);margin-bottom:.4rem;">六五 · 효 5</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.2rem;">육오(六五)</div>
+          <div style="font-size:.7rem;color:rgba(255,255,255,.5);font-style:italic;margin-bottom:.5rem;">射雉 一矢亡 終以譽命</div>
+          <div style="font-size:.72rem;color:rgba(220,200,255,.85);line-height:1.6;">화살 하나 잃고 마침내 명예와 사명을 얻다</div>
+          <div style="display:flex;gap:5px;margin-top:.7rem;"><div style="flex:1;height:4px;background:rgba(255,255,255,.35);border-radius:2px;"></div><div style="flex:1;height:4px;background:rgba(255,255,255,.35);border-radius:2px;"></div></div>
+          <div style="font-size:.58rem;color:rgba(255,255,255,.3);margin-top:.3rem;">음효(陰爻) · 군위(君位) · 大吉</div>
+        </div>
+        <div style="padding:1.8rem 2.2rem;background:#fff;border:1px solid var(--border);border-left:none;border-radius:0 var(--r) var(--r) 0;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:.4rem;">🗺️ 여행 의미</div>
+              <p style="font-size:.81rem;line-height:1.9;color:var(--muted);">상괘의 중심(君位)에 위치한 육오—여행자가 진정한 자신의 사명을 발견하는 전환점. "꿩을 쏘니 화살 하나를 잃었으나 마침내 명예와 사명을 얻는다." 작은 집착(화살)을 내려놓음으로써 더 큰 것(사명·그릿의 Purpose)을 얻습니다.</p>
+            </div>
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:var(--violet);margin-bottom:.4rem;">🧠 뇌파 통찰 상태</div>
+              <p style="font-size:.81rem;line-height:1.9;color:var(--muted);">Alpha 우세(8-10Hz) · 도파민 보상 회로 재설정. 전두엽 Alpha 비대칭이 좌측 우세로 전환(긍정 동기 회로 활성화). BDNF 증가로 신경 재생 가속. 창의적 통찰과 직관이 열리는 상태.</p>
+              <div style="margin-top:.5rem;display:flex;gap:.3rem;flex-wrap:wrap;">
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(94,69,144,.1);border:1px solid rgba(94,69,144,.2);color:var(--violet);">α 우세↑</span>
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(94,69,144,.1);border:1px solid rgba(94,69,144,.2);color:var(--violet);">도파민↑</span>
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(94,69,144,.1);border:1px solid rgba(94,69,144,.2);color:var(--violet);">BDNF↑</span>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:.9rem;padding:.5rem .9rem;background:rgba(94,69,144,.05);border-left:3px solid var(--violet);border-radius:0 6px 6px 0;font-size:.76rem;color:var(--muted);"><strong style="color:var(--violet);">처방:</strong> 그릿 목적(Purpose) 발견 워크숍 · FAWA 알(Awareness) · 뉴로피드백 Alpha 강화 고착</div>
+        </div>
+      </div>
+
+      <!-- 상구 -->
+      <div style="display:grid;grid-template-columns:200px 1fr;gap:0;border-radius:var(--r);overflow:hidden;">
+        <div style="padding:2rem 1.5rem;background:linear-gradient(135deg,#1e4230,#2a5940);display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'DM Mono',monospace;font-size:.55rem;letter-spacing:.18em;color:rgba(180,255,210,.5);margin-bottom:.4rem;">上九 · 효 6</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:.2rem;">상구(上九)</div>
+          <div style="font-size:.7rem;color:rgba(255,255,255,.5);font-style:italic;margin-bottom:.5rem;">鳥焚其巢 旅人先笑後號咷 喪牛于易 凶</div>
+          <div style="font-size:.72rem;color:rgba(180,255,210,.85);line-height:1.6;">새가 둥지를 태우니, 먼저 웃다가 나중에 울부짖다</div>
+          <div style="width:56px;height:5px;background:rgba(255,255,255,.6);border-radius:2px;margin-top:.7rem;"></div>
+          <div style="font-size:.58rem;color:rgba(255,255,255,.3);margin-top:.3rem;">양효(陽爻) · 극점 · 통합</div>
+        </div>
+        <div style="padding:1.8rem 2.2rem;background:linear-gradient(135deg,rgba(42,89,64,.04),rgba(212,168,50,.02));border:1px solid rgba(42,89,64,.15);border-left:none;border-radius:0 var(--r) var(--r) 0;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;">
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:.4rem;">🗺️ 여행의 완성</div>
+              <p style="font-size:.81rem;line-height:1.9;color:var(--muted);">"새가 그 둥지를 태우니 나그네가 처음에는 웃다가 나중에 울고 부르짖는다." 여행의 극점—기존의 '둥지(자아·안전지대)'가 완전히 소실됩니다. 처음의 웃음(해방감)이 나중의 눈물(통합적 각성)로 이어지는 이 역설이 이근원통의 적멸 현전(寂滅現前)입니다. 상구의 경고(소·경계·흉)는 이 극점에서 다시 집착하지 말라는 뜻입니다.</p>
+            </div>
+            <div>
+              <div style="font-family:'Noto Serif KR',serif;font-size:.9rem;font-weight:600;color:var(--forest);margin-bottom:.4rem;">🧠 신경 공명 완성</div>
+              <p style="font-size:.81rem;line-height:1.9;color:var(--muted);">신경계 코히어런스 극대화 · 예측 오류 붕괴(Prediction Error Collapse). 뇌-심장-장 축 공명. DMN과 태스크 네트워크 통합. 팔머 브레인에너지의 미토콘드리아 최적 상태. FAWA 알(Awareness)의 신경학적 완성—공존감 확립.</p>
+              <div style="margin-top:.5rem;display:flex;gap:.3rem;flex-wrap:wrap;">
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(42,89,64,.12);border:1px solid rgba(42,89,64,.25);color:var(--forest);">신경 공명</span>
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(42,89,64,.12);border:1px solid rgba(42,89,64,.25);color:var(--forest);">예측 오류 붕괴</span>
+                <span style="padding:.1rem .45rem;border-radius:6px;font-size:.58rem;background:rgba(42,89,64,.12);border:1px solid rgba(42,89,64,.25);color:var(--forest);">공존감 완성</span>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:.9rem;padding:.5rem .9rem;background:rgba(42,89,64,.07);border-left:3px solid var(--forest);border-radius:0 6px 6px 0;font-size:.76rem;color:var(--muted);"><strong style="color:var(--forest);">완성:</strong> FAWA 알(Awareness) 완전 체험 · 이근원통 문성현전 · 뉴로하모니 사후 qEEG 치유 검증</div>
+        </div>
+      </div>
+
+    </div><!-- end 6효 -->
+
+    <!-- 통합 로드맵 표 -->
+    <div style="margin-top:3rem;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:2.5rem;overflow-x:auto;">
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:1.2rem;text-align:center;">화산려 6효 × 뇌파 × FAWA × 그릿행복여행 통합 로드맵</h3>
+      <table style="width:100%;border-collapse:collapse;font-size:.77rem;min-width:700px;">
+        <thead>
+          <tr style="background:var(--forest);">
+            <th style="padding:.65rem .9rem;color:#fff;font-family:'DM Mono',monospace;font-size:.53rem;letter-spacing:.1em;text-align:left;white-space:nowrap;">효(爻)</th>
+            <th style="padding:.65rem .9rem;color:#fff;font-family:'DM Mono',monospace;font-size:.53rem;letter-spacing:.1em;text-align:left;">효사 핵심</th>
+            <th style="padding:.65rem .9rem;color:#fff;font-family:'DM Mono',monospace;font-size:.53rem;letter-spacing:.1em;text-align:left;">여행 단계</th>
+            <th style="padding:.65rem .9rem;color:#fff;font-family:'DM Mono',monospace;font-size:.53rem;letter-spacing:.1em;text-align:left;">지배 뇌파</th>
+            <th style="padding:.65rem .9rem;color:#fff;font-family:'DM Mono',monospace;font-size:.53rem;letter-spacing:.1em;text-align:left;">FAWA</th>
+            <th style="padding:.65rem .9rem;color:#fff;font-family:'DM Mono',monospace;font-size:.53rem;letter-spacing:.1em;text-align:left;">그릿 GRIT</th>
+            <th style="padding:.65rem .9rem;color:#fff;font-family:'DM Mono',monospace;font-size:.53rem;letter-spacing:.1em;text-align:left;">뉴로피드백</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:.65rem .9rem;font-family:'Noto Serif KR',serif;font-weight:700;color:var(--rose);white-space:nowrap;">초육(初六)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">旅瑣瑣 — 집착</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">출발 전 불안</td>
+            <td style="padding:.65rem .9rem;color:var(--rose);font-family:'DM Mono',monospace;font-size:.65rem;">High β 과잉<br>DMN 과활성</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">Pre-FAWA</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">탐색 전</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">qEEG 사전 측정</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);background:rgba(42,89,64,.02);">
+            <td style="padding:.65rem .9rem;font-family:'Noto Serif KR',serif;font-weight:700;color:var(--forest);white-space:nowrap;">육이(六二)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">旅即次 — 안착</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">자연 속 정착</td>
+            <td style="padding:.65rem .9rem;color:var(--forest);font-family:'DM Mono',monospace;font-size:.65rem;">α 증가↑<br>HRV 안정</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">따(Follow)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">관심(Interest)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">1차 측정</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:.65rem .9rem;font-family:'Noto Serif KR',serif;font-weight:700;color:var(--gold);white-space:nowrap;">구삼(九三)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">旅焚其次 — 위기</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">자아 저항 위기</td>
+            <td style="padding:.65rem .9rem;color:var(--gold);font-family:'DM Mono',monospace;font-size:.65rem;">θ 급증<br>예측 오류↑</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">몰(Absorb)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">연습(Practice)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">θ 억제 훈련</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);background:rgba(27,95,122,.02);">
+            <td style="padding:.65rem .9rem;font-family:'Noto Serif KR',serif;font-weight:700;color:var(--sky);white-space:nowrap;">구사(九四)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">我心不快 — 내성</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">임시 안착·성찰</td>
+            <td style="padding:.65rem .9rem;color:var(--sky);font-family:'DM Mono',monospace;font-size:.65rem;">α-θ 경계<br>dlPFC↑</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">지(Watch)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">목적 탐색</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">α/θ 훈련</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:.65rem .9rem;font-family:'Noto Serif KR',serif;font-weight:700;color:var(--violet);white-space:nowrap;">육오(六五)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">終以譽命 — 사명</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">통찰·사명 발견</td>
+            <td style="padding:.65rem .9rem;color:var(--violet);font-family:'DM Mono',monospace;font-size:.65rem;">α 우세↑<br>도파민 재설정</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">알(Awareness)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">목적(Purpose)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">α 강화 고착</td>
+          </tr>
+          <tr>
+            <td style="padding:.65rem .9rem;font-family:'Noto Serif KR',serif;font-weight:700;color:var(--forest);white-space:nowrap;">상구(上九)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">鳥焚其巢 — 통합</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">귀환·공존감 완성</td>
+            <td style="padding:.65rem .9rem;color:var(--forest);font-family:'DM Mono',monospace;font-size:.65rem;">신경 공명<br>예측 오류 붕괴</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">알(Awareness)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">희망(Hope)</td>
+            <td style="padding:.65rem .9rem;color:var(--muted);">qEEG 사후 검증</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     PART 2 : 이근원통
+     ============================================================ -->
+<div class="sec-warm" id="igeun">
+  <div class="wrap">
+    <p class="tag tag-forest">// 02 · 楞嚴經 耳根圓通 — 능엄경 이근원통</p>
+    <h2 class="h2">귀를 돌이켜 내면을 듣는다<br><em>반문문자성(反聞聞自性)</em></h2>
+    <p class="lead">능엄경(楞嚴經, Śūraṅgama Sūtra)의 이근원통(耳根圓通)은 관세음보살이 소리를 따라가는 대신 '듣는 자를 돌이켜 보는' 수행으로 깨달음에 이른 길입니다. 이것이 ADHD와 만성 스트레스를 치유하는 가장 강력한 안으로의 여행입니다.</p>
+
+    <div class="qblock" style="margin-top:2rem;">
+      <p>"처음에 듣는 성품 가운데서 성품의 흐름을 따라 들어가니, 소리의 대상이 없어지고… 생멸이 이미 사라지자 적멸(寂滅)이 현전(現前)하였습니다."</p>
+      <cite>— 능엄경 관세음보살 이근원통장(耳根圓通章)</cite>
+    </div>
+
+    <div class="grid-2" style="margin-top:2rem;">
+      <div class="card">
+        <div class="ctag tag-forest">// ADHD와 이근원통의 연결</div>
+        <div class="ctitle">외부 자극에 반응하는 뇌 → 듣는 자를 보는 뇌</div>
+        <div class="cbody">
+          ADHD의 핵심 병리는 외부 자극을 수동적으로 쫓는 데 있습니다. 소리, 움직임, 생각이 떠오를 때마다 주의가 그리로 끌려갑니다. 이근원통의 반문(反聞)—소리를 쫓지 않고 '지금 누가 듣는가'를 관조—은 이 자동화된 주의 포획 패턴을 해체합니다. <br><br>
+          신경과학적으로 이는 배외측 전전두엽(dlPFC)의 메타인지 활성화이며, ADHD 치료의 핵심 타깃인 <strong>메타주의력(Meta-attention)</strong>을 직접 훈련합니다.
+        </div>
+      </div>
+      <div class="card">
+        <div class="ctag tag-sky">// 이근원통 수행 4단계</div>
+        <div class="ctitle">문성(聞聲) → 각문(覺聞) → 반문(反聞) → 문성현전(聞性現前)</div>
+        <div class="cbody">
+          <strong>聞聲(문성):</strong> 소리를 있는 그대로 수용, 판단 없이 따라가기<br><br>
+          <strong>覺聞(각문):</strong> 소리의 진동이 전신으로 퍼지는 것을 자각, 몸으로 흡수<br><br>
+          <strong>反聞(반문):</strong> '지금 누가 듣는가'를 돌이켜 보는 핵심 전환—투쟁-회피 자동 반응 해체<br><br>
+          <strong>聞性現前(문성현전):</strong> 소리의 유무를 넘어 밝은 자각의 장이 드러남—공존감 완성
+        </div>
+      </div>
+    </div>
+
+    <!-- 스트레스·ADHD 치유 메커니즘 -->
+    <div class="card" style="margin-top:1.5rem;">
+      <div class="ctag tag-gold">// 이근원통이 ADHD와 스트레스를 치유하는 신경생리학적 경로</div>
+      <div class="cbody" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;margin-top:.5rem;">
+        <div>
+          <div style="font-family:'Noto Serif KR',serif;font-weight:600;color:var(--ink);margin-bottom:.5rem;">① 전전두피질 활성화</div>
+          소리를 판단 없이 따르고 관조하는 훈련이 ADHD에서 저활성화된 PFC와 dlPFC를 반복적으로 자극합니다. 뇌영상 연구에서 4일 템플스테이만으로도 dlPFC 활성이 유의미하게 증가했습니다.
+        </div>
+        <div>
+          <div style="font-family:'Noto Serif KR',serif;font-weight:600;color:var(--ink);margin-bottom:.5rem;">② DMN 진정·HRV 안정</div>
+          반문(反聞) 수행은 ADHD의 과잉 자아 내러티브를 담당하는 기본 모드 네트워크(DMN)를 진정시킵니다. 동시에 부교감신경계를 활성화하여 HRV Coherence(0.1Hz 공명)를 형성합니다.
+        </div>
+        <div>
+          <div style="font-family:'Noto Serif KR',serif;font-weight:600;color:var(--ink);margin-bottom:.5rem;">③ 미토콘드리아 회복</div>
+          팔머 교수의 브레인에너지 이론과 연결됩니다. 명상을 통한 만성 스트레스 해소는 뇌세포 미토콘드리아의 기능을 정상화하며, 이것이 ADHD와 우울·불안의 근본 치유 경로입니다.
+        </div>
+      </div>
+      @media(max-width:700px){.cbody>div+div{border-top:1px solid var(--border);padding-top:1rem;}}
+    </div>
+  </div>
+</div>
+
+<div class="sdiv"><div class="sline"></div><div class="sglyph">Brain Energy</div><div class="sline"></div></div>
+
+<!-- ============================================================
+     PART 3 : 브레인에너지 이론
+     ============================================================ -->
+<div class="sec-dark" id="brain">
+  <div class="wrap">
+    <p class="tag tag-white">// 03 · Christopher Palmer · Brain Energy Theory</p>
+    <h2 class="h2 h2-white">크리스토퍼 팔머 교수<br><em>브레인에너지: 미토콘드리아가 열쇠다</em></h2>
+    <p class="lead lead-white">하버드 의과대학 정신의학과 크리스토퍼 M. 팔머 교수는 20년 이상의 임상 연구 끝에 혁명적 결론에 도달했습니다. ADHD, 우울증, 불안장애 등 모든 정신질환의 공통 뿌리는 <strong style="color:var(--gold2);">뇌세포 미토콘드리아의 기능 이상</strong>입니다.</p>
+
+    <div class="be-grid">
+      <div class="be-portrait">
+        <div class="icon">🧬</div>
+        <div class="name">Christopher M. Palmer</div>
+        <div class="univ">Harvard Medical School<br>정신의학과 교수<br>Brain Energy (2022)</div>
+      </div>
+      <div class="be-theory">
+        <h3>브레인에너지(Brain Energy) 핵심 이론</h3>
+        <p>팔머 교수는 정신질환과 대사증후군(당뇨, 비만, 심혈관질환)이 높은 상관관계를 보이는 이유를 추적하여, 두 영역을 연결하는 공통 경로가 <strong style="color:var(--gold2);">미토콘드리아</strong>임을 밝혔습니다. 미토콘드리아는 세포 에너지(ATP)를 생산하는 기관이자, 신경전달물질 생성, 뇌 회로 형성, 신경가소성 전체를 조절합니다.</p>
+        <p>ADHD의 도파민 불균형, 전두엽 저활성화, 과잉 스트레스 반응—이 모든 것이 미토콘드리아 기능 저하와 연결됩니다. 그리고 <strong style="color:var(--gold2);">명상과 치유 여행은 미토콘드리아를 회복시키는 가장 강력한 생활 방식 개입</strong>입니다.</p>
+        <div class="be-pillars">
+          <div class="be-pillar">
+            <div class="be-pillar-icon">🔋</div>
+            <div class="be-pillar-title">미토콘드리아<br>에너지 대사</div>
+            <div class="be-pillar-body">ATP 생산 저하 → 뇌 에너지 부족 → ADHD·우울·불안</div>
+          </div>
+          <div class="be-pillar">
+            <div class="be-pillar-icon">🧠</div>
+            <div class="be-pillar-title">신경전달물질<br>조절</div>
+            <div class="be-pillar-body">도파민·세로토닌 생성이 미토콘드리아 기능에 의존</div>
+          </div>
+          <div class="be-pillar">
+            <div class="be-pillar-icon">🌿</div>
+            <div class="be-pillar-title">생활방식<br>치유</div>
+            <div class="be-pillar-body">명상, 자연, 수면, 운동이 미토콘드리아를 직접 회복</div>
+          </div>
+          <div class="be-pillar">
+            <div class="be-pillar-icon">🏔️</div>
+            <div class="be-pillar-title">치유 여행<br>효과</div>
+            <div class="be-pillar-body">자연 환경·일상 탈출이 코르티솔을 낮추고 미토 기능 정상화</div>
+          </div>
+          <div class="be-pillar">
+            <div class="be-pillar-icon">🎯</div>
+            <div class="be-pillar-title">목적의식<br>삶의 의미</div>
+            <div class="be-pillar-body">그릿(GRIT)의 목적과 희망이 미토콘드리아 기능 개선에 기여</div>
+          </div>
+          <div class="be-pillar">
+            <div class="be-pillar-icon">☀️</div>
+            <div class="be-pillar-title">햇빛·자연<br>리듬 회복</div>
+            <div class="be-pillar-body">치유관광 자원(경관, 온천, 맨발걷기)이 일주기 리듬 복원</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qblock qblock-dark" style="margin-top:2.5rem;">
+      <p>"미토콘드리아 기능을 정상화하는 규칙적 생활, 수면과 햇빛, 식습관, 운동, <strong style="color:var(--gold2);">그리고 삶의 목적</strong> 등이 어떻게 정신질환 환자들에게 도움이 되는지를 설득력 있게 제시한다. 책을 펴는 순간 지친 마음의 에너지를 회복하는 노하우를 알게 되고, 책을 덮는 순간 행복한 인생을 설계할 힘을 얻게 될 것이다."</p>
+      <cite>— 김대수 KAIST 뇌인지과학과 교수, 추천사 (브레인에너지, 2024 한국어판)</cite>
+    </div>
+
+    <!-- ADHD × 브레인에너지 × 치유관광 연결 -->
+    <div class="grid-3" style="margin-top:2rem;">
+      <div class="card card-dark">
+        <div class="ci">⚡</div>
+        <div class="ctag" style="color:rgba(255,255,255,.4);">// ADHD × 미토콘드리아</div>
+        <div class="ctitle ctitle-white">ADHD는 뇌 에너지 부족이다</div>
+        <div class="cbody cbody-white">도파민 신호계는 미토콘드리아의 에너지 생산에 의존합니다. 미토콘드리아 기능 저하 → 전두엽 에너지 부족 → PFC 저활성화 → 충동 억제 실패의 연쇄가 ADHD의 핵심 경로입니다.</div>
+      </div>
+      <div class="card card-dark">
+        <div class="ci">🧘</div>
+        <div class="ctag" style="color:rgba(255,255,255,.4);">// 이근원통 × 미토콘드리아</div>
+        <div class="ctitle ctitle-white">명상이 미토콘드리아를 회복한다</div>
+        <div class="cbody cbody-white">FAWA 선명상을 통한 만성 스트레스(코르티솔) 감소는 미토콘드리아에 가해지는 산화 스트레스를 줄입니다. 동시에 뇌 유래 신경영양인자(BDNF)를 증가시켜 신경 세포 회복을 촉진합니다.</div>
+      </div>
+      <div class="card card-dark">
+        <div class="ci">🗺️</div>
+        <div class="ctag" style="color:rgba(255,255,255,.4);">// 치유 여행 × 미토콘드리아</div>
+        <div class="ctitle ctitle-white">자연이 뇌 에너지를 충전한다</div>
+        <div class="cbody cbody-white">그릿행복여행의 자연 속 경험—햇빛, 맑은 공기, 경관, 온천—은 일주기 리듬을 복원하고 미토콘드리아 기능을 직접 회복시킵니다. 팔머 교수가 강조하는 '삶의 목적'이 그릿(GRIT)과 정확히 대응합니다.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PART 4 : 치유관광산업육성법
+     ============================================================ -->
+<div class="sec" id="law">
+  <div class="wrap">
+    <p class="tag tag-forest">// 04 · 치유관광산업 육성에 관한 법률 (2025)</p>
+    <h2 class="h2">치유관광산업육성법<br><em>제도가 치유의 시대를 연다</em></h2>
+    <p class="lead">2025년 3월 19일 국회 본회의를 통과한 「치유관광산업 육성에 관한 법률」은 한국 치유관광의 역사적 이정표입니다. 이 법은 그릿행복여행과 FAWA 선명상을 포함한 다양한 치유관광 프로그램의 제도적 기반이 됩니다.</p>
+
+    <div class="law-panel">
+      <div class="law-title">
+        <span class="law-badge">2025.03.19 국회 통과</span>
+        <span class="law-name">치유관광산업 육성에 관한 법률</span>
+      </div>
+      <div class="law-def">
+        <strong>제2조 정의:</strong> "치유관광"이란 경관, 온천, 음식, 맨발걷기길 등 <strong>치유관광자원을 활용하여 건강의 회복과 증진을 도모하고 삶의 질 향상을 추구하는 관광활동</strong>을 말한다.<br>
+        <span style="font-size:.8rem;color:var(--muted);">— 치유관광산업 육성에 관한 법률 제2조</span>
+      </div>
+      <div class="law-items">
+        <div class="law-item">
+          <div class="law-item-title">🎯 목적</div>
+          <div class="law-item-body">치유관광산업의 고부가가치화를 위한 산업적 기반 마련. 국민의 신체적·정신적·사회적 건강의 회복과 증진, 삶의 질 향상 및 국가경제 발전에 기여.</div>
+        </div>
+        <div class="law-item">
+          <div class="law-item-title">📋 기본계획</div>
+          <div class="law-item-body">문화체육관광부가 5년마다 치유관광산업 육성 기본계획 수립. 치유관광사업자 등록제·우수시설 인증제 운영으로 체계적 품질 관리.</div>
+        </div>
+        <div class="law-item">
+          <div class="law-item-title">🌏 시장 규모</div>
+          <div class="law-item-body">2020년 세계 치유관광 시장 4,357억 달러(약 617조 원). 2025년까지 연평균 20.9% 성장 전망(Global Wellness Institute). 의료·웰니스 관광 소비 연 24% 성장.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-top:1.5rem;">
+      <div class="card">
+        <div class="ci">⚖️</div>
+        <div class="ctag tag-forest">// 법적 기반</div>
+        <div class="ctitle">그릿행복여행의 법적 근거</div>
+        <div class="cbody">치유관광산업육성법은 FAWA 선명상 프로그램, 뉴로하모니 뇌과학 분석, 주역·이근원통 기반 명상 체험을 치유관광 프로그램으로 공식 인정하는 제도적 토대를 제공합니다.</div>
+      </div>
+      <div class="card">
+        <div class="ci">🤝</div>
+        <div class="ctag tag-sky">// 협력 체계</div>
+        <div class="ctitle">K-MediWell과의 연계</div>
+        <div class="cbody">의료관광(보건복지부)과 웰니스관광(문화체육관광부)의 칸막이를 넘어, K-MediWell 융합 모델이 치유관광산업육성법을 법적 토대로 삼아 고부가가치 치유관광을 실현합니다.</div>
+      </div>
+      <div class="card">
+        <div class="ci">🚀</div>
+        <div class="ctag tag-gold">// 새 시대</div>
+        <div class="ctitle">2026년 — 치유관광의 시대 개막</div>
+        <div class="cbody">법 시행(2026년 상반기 예정)과 함께 치유관광시설 지정, 전문인력 양성, 치유관광산업지구 지정이 본격화됩니다. 그릿행복여행과 FAWA 명상이 선도적 모델이 될 것입니다.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sdiv"><div class="sline"></div><div class="sglyph">두 갈래 길</div><div class="sline"></div></div>
+
+<!-- ============================================================
+     PART 5 : 밖으로 + 안으로
+     ============================================================ -->
+<div class="sec-parch" id="grit">
+  <div class="wrap">
+    <p class="tag tag-gold">// 05 · 두 갈래의 치유 여행</p>
+    <h2 class="h2">밖으로 떠나는 <em>그릿행복여행</em><br>안으로 떠나는 <em>FAWA 선명상</em></h2>
+    <p class="lead">치유관광의 시대는 두 가지 여정을 동시에 요청합니다. 주역의 불(離)처럼 자연 속으로 나아가는 그릿행복여행과, 산(艮)처럼 고요히 내면을 응시하는 FAWA 선명상. 이 두 길은 하나의 목적지—공존감(Co-existence Awareness)—로 수렴합니다.</p>
+
+    <div class="twoways">
+      <div class="tw-box tw-out">
+        <div class="tw-label">OUT · 밖으로의 여행</div>
+        <div class="tw-title">🌿 그릿행복여행<br><span style="font-size:.8rem;font-weight:300;">이용근 교수 · K-MediWell</span></div>
+        <ul class="tw-items">
+          <li>주역 旅卦(여괘)의 '유순하고 겸허한 변화'</li>
+          <li>자연 속 경관·온천·맨발걷기·산림치유</li>
+          <li>코르티솔 감소 · 미토콘드리아 에너지 충전</li>
+          <li>그릿(GRIT) — 관심·연습·목적·희망 훈련</li>
+          <li>공동체 체험 · 대인간 생리 동기화</li>
+          <li>뉴로하모니 뇌파 사전·사후 비교 분석</li>
+          <li>치유관광산업육성법 기반 공식 프로그램</li>
+        </ul>
+      </div>
+      <div class="tw-arrow">⟺</div>
+      <div class="tw-box tw-in">
+        <div class="tw-label">IN · 안으로의 여행</div>
+        <div class="tw-title">🧘 FAWA 선명상<br><span style="font-size:.8rem;font-weight:300;">강태원 · 이근원통 기반</span></div>
+        <ul class="tw-items">
+          <li>능엄경 이근원통 반문문자성(反聞聞自性)</li>
+          <li>따→몰→지→알 4단계 인지 훈련</li>
+          <li>메타주의력 · dlPFC 전전두엽 활성화</li>
+          <li>DMN 진정 · HRV Coherence 형성</li>
+          <li>예측 오류 붕괴 · 신경 공명</li>
+          <li>투쟁심리 → 공존감 전환</li>
+          <li>개전일체(開全一體) · 비이원적 인식</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:2rem;background:linear-gradient(135deg,rgba(42,89,64,.05),rgba(94,69,144,.05));">
+      <div style="text-align:center;padding:.5rem 0;">
+        <div style="font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:600;color:var(--ink);margin-bottom:.8rem;">두 여행의 공통 목적지</div>
+        <div style="font-family:'Noto Serif KR',serif;font-size:1.8rem;font-weight:700;color:var(--forest);margin-bottom:.5rem;">공존감(Co-existence Awareness)</div>
+        <p style="font-size:.88rem;color:var(--muted);line-height:2;max-width:600px;margin:0 auto;">분리감과 고립에서 벗어나 자연·타인·우주와 연결되어 있음을 체험하는 상태. 이것이 ADHD와 만성 스트레스의 근원적 치유이며, 주역의 음양 조화, 이근원통의 적멸 현전, 브레인에너지의 미토콘드리아 코히어런스가 모두 가리키는 하나의 지향점입니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     PART 6 : FAWA 4단계 상세
+     ============================================================ -->
+<div class="sec" id="fawa">
+  <div class="wrap">
+    <p class="tag tag-forest">// 06 · FAWA 선명상 4단계 프로토콜</p>
+    <h2 class="h2">이근원통 × 뇌과학<br><em>FAWA</em> 통합 수행 알고리즘</h2>
+    <p class="lead">강태원 수행연구가가 능엄경 이근원통의 반문문자성 원리와 현대 예측 처리 이론(Predictive Processing)을 융합하여 구조화한 4단계 인지 훈련 프로토콜입니다. ADHD와 스트레스를 안으로부터 치유합니다.</p>
+
+    <div class="fawa-list">
+      <div class="fawa-step f1">
+        <div class="fs-left">
+          <div class="fn">01</div>
+          <div class="fkr">따</div>
+          <div class="fen">FOLLOW · 따라하기</div>
+          <div class="figeun">이근원통: 문성(聞聲) · 주역: 수용(受容)</div>
+        </div>
+        <div class="fs-right">
+          <div class="frtitle">소리와 감각을 판단 없이 따라가기</div>
+          <div class="frbody">주역 여괘가 요구하는 '유순하고 겸허한 태도'로 감각을 있는 그대로 수용합니다. 신경과학적으로 <strong>감각 정밀도 가중치(Precision Weighting)</strong>를 높이며, 일차 체성감각 피질(S1)과 섬엽(Insula)이 활성화됩니다. 브레인에너지 관점에서 만성 스트레스 반응이 첫 번째로 이완됩니다.</div>
+          <div class="fadhd">
+            <div class="fadhd-lbl">// ADHD·스트레스 치유 접점</div>
+            즉각 반박하고 차단하는 '전쟁 심리' 자동화 회로를 멈추는 첫 진화적 전환점. 타인의 말과 환경 자극을 위협이 아닌 순수한 감각 현상으로 수용하기 시작합니다.
+          </div>
+          <div class="fchips">
+            <span class="fchip">사대 각성</span><span class="fchip">Insula 활성</span>
+            <span class="fchip">부교감신경 준비</span><span class="fchip">코르티솔 감소 시작</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fawa-step f2">
+        <div class="fs-left">
+          <div class="fn">02</div>
+          <div class="fkr">몰</div>
+          <div class="fen">ABSORB · 몰입하기</div>
+          <div class="figeun">이근원통: 각문(覺聞) · 주역: 화(化)융합</div>
+        </div>
+        <div class="fs-right">
+          <div class="frtitle">소리의 공명이 전신으로 퍼지도록 허용하기</div>
+          <div class="frbody">소리의 진동이 전신으로 퍼지는 것을 허용합니다. <strong>기본 모드 네트워크(DMN)</strong>—과잉 자아 내러티브와 반추—가 급감하고 세일리언스 네트워크(SN)가 주도권을 잡습니다. HRV Coherence(0.1Hz)가 형성되며 심폐 결합이 강화됩니다.</div>
+          <div class="fadhd">
+            <div class="fadhd-lbl">// ADHD·스트레스 치유 접점</div>
+            '나'라는 인지적 저항이 사라지며 ADHD의 과잉 반추가 해소됩니다. 미토콘드리아 회복에 필수적인 부교감 우세 상태(rest & repair)가 활성화됩니다.
+          </div>
+          <div class="fchips">
+            <span class="fchip">DMN 감소</span><span class="fchip">HRV Coherence</span>
+            <span class="fchip">심폐 결합</span><span class="fchip">미토콘드리아 회복 시작</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fawa-step f3">
+        <div class="fs-left">
+          <div class="fn">03</div>
+          <div class="fkr">지</div>
+          <div class="fen">WATCH · 지켜보기</div>
+          <div class="figeun">이근원통: 반문(反聞) · 주역: 관(觀)관찰</div>
+        </div>
+        <div class="fs-right">
+          <div class="frtitle">듣는 자를 돌이켜 비추기 — 이근원통의 핵심</div>
+          <div class="frbody">이것이 반문문자성(反聞聞自性)의 실천입니다. "지금 누가 듣는가"를 관조하며 <strong>배외측 전전두엽(dlPFC)의 메타인지</strong>를 활성화합니다. ADHD에서 저활성화된 PFC가 직접 훈련됩니다. 투쟁-회피 반응 회로가 해체되는 결정적 전환점입니다.</div>
+          <div class="fadhd">
+            <div class="fadhd-lbl">// ADHD·스트레스 치유 접점</div>
+            ADHD의 가장 핵심 결함—'주의가 흩어졌음을 인식하지 못하는 것'—을 메타주의력 훈련으로 직접 치유합니다. 스트레스 상황에서 즉각 반응하지 않는 능력이 강화됩니다.
+          </div>
+          <div class="fchips">
+            <span class="fchip">dlPFC 활성</span><span class="fchip">메타주의력</span>
+            <span class="fchip">충동 억제 강화</span><span class="fchip">BDNF 증가</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="fawa-step f4">
+        <div class="fs-left">
+          <div class="fn">04</div>
+          <div class="fkr">알</div>
+          <div class="fen">AWARENESS · 알아차리기</div>
+          <div class="figeun">이근원통: 문성현전(聞性現前) · 주역: 태(泰)조화</div>
+        </div>
+        <div class="fs-right">
+          <div class="frtitle">소리가 사라진 정적 속 밝은 자각 — 적멸 현전</div>
+          <div class="frbody">주체와 객체의 경계가 사라집니다. 신경계 전체의 <strong>코히어런스(Coherence)</strong>가 극대화되어 뇌-심장-장 축이 동일 주파수로 공명합니다. 팔머 교수의 브레인에너지 이론에서 말하는 뇌세포 미토콘드리아의 <strong>최적 에너지 상태</strong>에 도달합니다.</div>
+          <div class="fadhd">
+            <div class="fadhd-lbl">// ADHD·스트레스 치유 접점</div>
+            분리감과 만성 불안이 공존감(Co-existence Awareness)으로 전환됩니다. 주역의 음양 조화 상태, 능엄경의 적멸 현전, 브레인에너지의 미토콘드리아 코히어런스가 하나로 수렴합니다.
+          </div>
+          <div class="fchips">
+            <span class="fchip">신경 공명</span><span class="fchip">예측 오류 붕괴</span>
+            <span class="fchip">미토콘드리아 코히어런스</span><span class="fchip">공존감 완성</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     임상 근거
+     ============================================================ -->
+<div class="sec-warm">
+  <div class="wrap">
+    <p class="tag tag-sky">// 07 · Scientific Evidence</p>
+    <h2 class="h2">검증된 <em>임상 연구</em>들</h2>
+    <div class="ev-grid">
+      <div class="ev">
+        <div class="ev-icon">🏛️</div>
+        <div class="ev-src">Harvard Brain Energy · Palmer 2022</div>
+        <div class="ev-title">모든 정신질환의 공통 뿌리: 미토콘드리아</div>
+        <div class="ev-body">ADHD, 우울증, 불안장애가 공통으로 미토콘드리아 기능 이상과 연결됨. 명상, 자연 치유, 삶의 목적이 미토콘드리아를 직접 회복시키는 개입임을 20년 임상 연구로 입증.</div>
+      </div>
+      <div class="ev">
+        <div class="ev-icon">🏯</div>
+        <div class="ev-src">Scientific Reports 2023 · 한국 템플스테이</div>
+        <div class="ev-title">4일 집중 명상으로 dlPFC·ACC 활성 증가</div>
+        <div class="ev-body">한국 불교 명상 기반 4일 템플스테이 후 초보자도 ADHD 치료 핵심 타깃인 우측 dlPFC와 우측 ACC가 유의미하게 활성화. 단기 집중 치유 여행의 신경가소성 효과 입증.</div>
+      </div>
+      <div class="ev">
+        <div class="ev-icon">📊</div>
+        <div class="ev-src">Cairncross & Miller Meta-Analysis 2019</div>
+        <div class="ev-title">마음챙김, ADHD 부주의·과잉행동 모두 감소</div>
+        <div class="ev-body">메타분석에서 마음챙김 명상이 ADHD의 두 핵심 증상을 동시에 유의미하게 개선. 성인에서의 부주의 개선 효과가 특히 크게 나타남.</div>
+      </div>
+      <div class="ev">
+        <div class="ev-icon">💓</div>
+        <div class="ev-src">HRV 메가 스터디 2025 (180만 세션)</div>
+        <div class="ev-title">명상 중 심장-자율신경이 정현파로 안정</div>
+        <div class="ev-body">FAWA 몰입하기·지켜보기 상태와 대응하는 HRV Coherence(0.1Hz)가 감정 안정성과 깊게 연결됨. 부교감 우세 상태가 미토콘드리아 회복에 기여.</div>
+      </div>
+      <div class="ev">
+        <div class="ev-icon">🧬</div>
+        <div class="ev-src">fMRI RCT · ScienceDirect 2018</div>
+        <div class="ev-title">뇌 구조가 실제로 바뀐다</div>
+        <div class="ev-body">무작위 대조 fMRI 연구에서 명상 훈련 후 전두-두정 회로의 기능적 연결성이 강화. 행동 개선이 뇌 변화와 직접 대응.</div>
+      </div>
+      <div class="ev">
+        <div class="ev-icon">🧠</div>
+        <div class="ev-src">Brain Sciences · 강북삼성병원 2023</div>
+        <div class="ev-title">그릿이 높을수록 우울·스트레스 감소</div>
+        <div class="ev-body">직장인 1만 1422명 분석에서 그릿(GRIT)이 높은 사람일수록 스트레스 적게 경험하고 우울증 발생이 낮음. 그릿과 명상의 상승 효과 확인.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     그릿행복여행 프로그램
+     ============================================================ -->
+<div class="sec-parch">
+  <div class="wrap">
+    <p class="tag tag-gold">// 08 · K-MediWell 그릿행복여행 프로그램</p>
+    <h2 class="h2">치유관광산업육성법 기반<br><em>그릿행복여행</em> 통합 프로그램</h2>
+    <p class="lead">이용근 교수가 설계한 K-MediWell 그릿행복여행은 주역의 여행 철학, 이근원통의 명상 수행, 팔머 교수의 브레인에너지 회복, 그릿(GRIT)의 열정과 끈기를 하나의 치유관광 경험으로 통합합니다.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>일정</th><th>주제</th><th>밖으로 · 그릿행복여행</th><th>안으로 · FAWA 선명상</th><th>브레인에너지 효과</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Day 1</td>
+            <td>수용(受容) · 따(Follow)</td>
+            <td>자연 속 도착, 경관 감상, 맨발걷기, 뉴로하모니 뇌파 측정</td>
+            <td>이근원통 문성(聞聲) 입문 — 자연 소리 명상, 청각 개방</td>
+            <td>코르티솔 감소, 미토콘드리아 산화 스트레스 완화 시작</td>
+          </tr>
+          <tr>
+            <td>Day 2</td>
+            <td>몰입(沒入) · 몰(Absorb)</td>
+            <td>산림 치유, 온천 체험, 호흡 Coherence 훈련, HRV 측정</td>
+            <td>이근원통 각문(覺聞) — 소리의 전신 공명, 심폐 결합 훈련</td>
+            <td>부교감 활성화, ATP 생산 회복, 수면 품질 개선</td>
+          </tr>
+          <tr>
+            <td>Day 3</td>
+            <td>관조(觀照) · 지(Watch)</td>
+            <td>그릿 코칭 — 관심·연습·목적·희망 발견, 자기 관찰 워크숍</td>
+            <td>이근원통 반문(反聞) — 메타주의력 훈련, 충동 알아차리기</td>
+            <td>BDNF 증가, 전두엽 에너지 회복, 도파민 신호 안정</td>
+          </tr>
+          <tr>
+            <td>Day 4</td>
+            <td>각성(覺性) · 알(Awareness)</td>
+            <td>공동체 자애 수행, 뉴로하모니 사후 비교, 그릿 수행 계획 수립</td>
+            <td>이근원통 문성현전(聞性現前) — 공존감 확립, 개전일체(開全一體)</td>
+            <td>신경계 코히어런스 극대화, 미토콘드리아 최적 상태 달성</td>
+          </tr>
+          <tr>
+            <td>Follow-up</td>
+            <td>일상 속 치유 지속</td>
+            <td>매월 1회 온라인 그릿 코칭, K-MediWell 커뮤니티</td>
+            <td>매일 10분 FAWA 홈 프랙티스, 뉴로하모니 셀프 모니터링</td>
+            <td>지속적 미토콘드리아 건강 유지, ADHD 증상 장기 개선</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Journey map -->
+    <div style="margin-top:3rem;">
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:600;margin-bottom:2rem;color:var(--ink);">치유 여정 로드맵 — 주역에서 공존감까지</h3>
+      <div class="journey">
+        <div class="jline"></div>
+        <div class="jstops" style="grid-template-columns:repeat(6,1fr);">
+          <div class="jstop">
+            <div class="jdot">☯️</div>
+            <div class="jtitle">주역의 旅</div>
+            <div class="jbody">여행의 철학적 기반. 유순·겸허로 변화의 흐름에 순응</div>
+          </div>
+          <div class="jstop">
+            <div class="jdot">👂</div>
+            <div class="jtitle">이근원통</div>
+            <div class="jbody">귀를 돌이켜 자성(自性)을 듣는 명상. 안으로의 여행</div>
+          </div>
+          <div class="jstop">
+            <div class="jdot">🔬</div>
+            <div class="jtitle">브레인에너지</div>
+            <div class="jbody">미토콘드리아 회복. 과학이 치유의 메커니즘을 확인</div>
+          </div>
+          <div class="jstop">
+            <div class="jdot">📡</div>
+            <div class="jtitle">뉴로하모니</div>
+            <div class="jbody">qEEG·뉴로피드백으로 치유 효과를 측정하고 가속</div>
+          </div>
+          <div class="jstop">
+            <div class="jdot">⚖️</div>
+            <div class="jtitle">치유관광법</div>
+            <div class="jbody">제도가 치유의 시대를 연다. 2026년 본격 시행</div>
+          </div>
+          <div class="jstop">
+            <div class="jdot">🌍</div>
+            <div class="jtitle">공존감</div>
+            <div class="jbody">ADHD·스트레스를 넘어 자연·타인과 공명하는 존재로</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     NEURO SECTION : 뉴로피드백 × 뉴로하모니
+     ============================================================ -->
+<div class="nf-hero" id="neuro">
+  <div class="wrap">
+
+    <!-- 섹션 헤더 -->
+    <div class="nf-title-block">
+      <p class="nf-supertag">// 09 · Neurofeedback × NeuroHarmony · 뇌과학 기반 치유 분석</p>
+      <h2 class="nf-main-title">뉴로피드백과 <span class="hl">뉴로하모니</span><br>뇌파로 치유를 측정하고 증명한다</h2>
+      <p class="nf-lead">뉴로피드백(Neurofeedback)은 실시간 뇌파(EEG/qEEG) 측정을 통해 뇌 스스로 건강한 뇌파 상태를 학습하도록 훈련하는 과학입니다. 그릿행복여행과 FAWA 선명상의 치유 효과를 객관적으로 측정·검증하는 뉴로하모니(NeuroHarmony) 분석이 새로운 치유관광의 과학적 기반이 됩니다.</p>
+    </div>
+
+    <!-- ─── 실시간 뇌파 디스플레이 ─── -->
+    <div class="brainwave-display">
+      <div style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;color:rgba(0,210,200,.7);margin-bottom:1.2rem;text-align:center;">LIVE BRAINWAVE MONITOR — 뇌파 대역별 실시간 모니터링</div>
+
+      <!-- Delta -->
+      <div class="bw-row">
+        <div class="bw-header">
+          <span class="bw-lbl" style="color:rgba(180,150,255,.8);">δ Delta  1–4 Hz</span>
+          <span class="bw-val" style="background:rgba(180,150,255,.1);color:rgba(180,150,255,.8);">깊은 수면 · 회복</span>
+        </div>
+        <div class="bw-track">
+          <svg class="bw-svg bw-anim-1" viewBox="0 0 2000 48" preserveAspectRatio="none">
+            <path d="M0 24 Q125 5 250 24 Q375 43 500 24 Q625 5 750 24 Q875 43 1000 24 Q1125 5 1250 24 Q1375 43 1500 24 Q1625 5 1750 24 Q1875 43 2000 24"
+              fill="none" stroke="rgba(180,150,255,0.7)" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Theta — ADHD 과잉 표시 -->
+      <div class="bw-row">
+        <div class="bw-header">
+          <span class="bw-lbl" style="color:#e07a80;">θ Theta  4–8 Hz</span>
+          <span class="bw-val" style="background:rgba(244,63,94,.12);color:#e07a80;">⚠ ADHD 과잉 → 뉴로피드백 억제 타깃</span>
+        </div>
+        <div class="bw-track">
+          <svg class="bw-svg bw-anim-2" viewBox="0 0 2000 48" preserveAspectRatio="none">
+            <path d="M0 24 Q25 4 50 24 Q75 44 100 18 Q125 2 150 24 Q175 46 200 20 Q225 3 250 24 Q275 45 300 16 Q325 2 350 24 Q375 46 400 18 Q425 2 450 24 Q475 46 500 20 Q525 3 550 24 Q575 45 600 16 Q625 2 650 24 Q675 46 700 18 Q725 2 750 24 Q775 46 800 20 Q825 3 850 24 Q875 45 900 16 Q925 2 950 24 Q975 46 1000 18 Q1025 2 1050 24 Q1075 46 1100 20 Q1125 3 1150 24 Q1175 45 1200 16 Q1225 2 1250 24 Q1275 46 1300 18 Q1325 2 1350 24 Q1375 46 1400 20 Q1425 3 1450 24 Q1475 45 1500 16 Q1525 2 1550 24 Q1575 46 1600 18 Q1625 2 1650 24 Q1675 46 1700 20 Q1725 3 1750 24 Q1775 45 1800 16 Q1825 2 1850 24 Q1875 46 1900 18 Q1925 2 1950 24 Q1975 46 2000 18"
+              fill="none" stroke="#e07a80" stroke-width="2.5" opacity=".9"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Alpha — 명상 후 증가 -->
+      <div class="bw-row">
+        <div class="bw-header">
+          <span class="bw-lbl" style="color:#00d4c8;">α Alpha  8–12 Hz</span>
+          <span class="bw-val" style="background:rgba(0,212,200,.1);color:#00d4c8;">✓ FAWA 명상·그릿여행 후 현저한 증가</span>
+        </div>
+        <div class="bw-track">
+          <svg class="bw-svg bw-anim-3" viewBox="0 0 2000 48" preserveAspectRatio="none">
+            <path d="M0 24 Q50 10 100 24 Q150 38 200 24 Q250 10 300 24 Q350 38 400 24 Q450 10 500 24 Q550 38 600 24 Q650 10 700 24 Q750 38 800 24 Q850 10 900 24 Q950 38 1000 24 Q1050 10 1100 24 Q1150 38 1200 24 Q1250 10 1300 24 Q1350 38 1400 24 Q1450 10 1500 24 Q1550 38 1600 24 Q1650 10 1700 24 Q1750 38 1800 24 Q1850 10 1900 24 Q1950 38 2000 24"
+              fill="none" stroke="#00d4c8" stroke-width="2.5" opacity=".9"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- SMR -->
+      <div class="bw-row">
+        <div class="bw-header">
+          <span class="bw-lbl" style="color:#5dba80;">SMR  12–15 Hz</span>
+          <span class="bw-val" style="background:rgba(93,186,128,.1);color:#5dba80;">✓ 뉴로피드백 훈련으로 강화 · 집중력 향상</span>
+        </div>
+        <div class="bw-track">
+          <svg class="bw-svg bw-anim-4" viewBox="0 0 2000 48" preserveAspectRatio="none">
+            <path d="M0 24 Q33 14 66 24 Q99 34 132 24 Q165 14 198 24 Q231 34 264 24 Q297 14 330 24 Q363 34 396 24 Q429 14 462 24 Q495 34 528 24 Q561 14 594 24 Q627 34 660 24 Q693 14 726 24 Q759 34 792 24 Q825 14 858 24 Q891 34 924 24 Q957 14 990 24 Q1023 34 1056 24 Q1089 14 1122 24 Q1155 34 1188 24 Q1221 14 1254 24 Q1287 34 1320 24 Q1353 14 1386 24 Q1419 34 1452 24 Q1485 14 1518 24 Q1551 34 1584 24 Q1617 14 1650 24 Q1683 34 1716 24 Q1749 14 1782 24 Q1815 34 1848 24 Q1881 14 1914 24 Q1947 34 1980 24 Q2000 18 2000 18"
+              fill="none" stroke="#5dba80" stroke-width="2" opacity=".8"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Beta -->
+      <div class="bw-row" style="margin-bottom:0;">
+        <div class="bw-header">
+          <span class="bw-lbl" style="color:#d4a832;">β Beta  13–30 Hz</span>
+          <span class="bw-val" style="background:rgba(212,168,50,.1);color:#d4a832;">↑ 뉴로피드백 θ/β 훈련으로 회복</span>
+        </div>
+        <div class="bw-track">
+          <svg class="bw-svg bw-anim-5" viewBox="0 0 2000 48" preserveAspectRatio="none">
+            <path d="M0 24 Q16 18 32 24 Q48 30 64 24 Q80 18 96 24 Q112 30 128 24 Q144 18 160 24 Q176 30 192 24 Q208 18 224 24 Q240 30 256 24 Q272 18 288 24 Q304 30 320 24 Q336 18 352 24 Q368 30 384 24 Q400 18 416 24 Q432 30 448 24 Q464 18 480 24 Q496 30 512 24 Q528 18 544 24 Q560 30 576 24 Q592 18 608 24 Q624 30 640 24 Q656 18 672 24 Q688 30 704 24 Q720 18 736 24 Q752 30 768 24 Q784 18 800 24 Q816 30 832 24 Q848 18 864 24 Q880 30 896 24 Q912 18 928 24 Q944 30 960 24 Q976 18 992 24 Q1008 30 1024 24 Q1040 18 1056 24 Q1072 30 1088 24 Q1104 18 1120 24 Q1136 30 1152 24 Q1168 18 1184 24 Q1200 30 1216 24 Q1232 18 1248 24 Q1264 30 1280 24 Q1296 18 1312 24 Q1328 30 1344 24 Q1360 18 1376 24 Q1392 30 1408 24 Q1424 18 1440 24 Q1456 30 1472 24 Q1488 18 1504 24 Q1520 30 1536 24 Q1552 18 1568 24 Q1584 30 1600 24 Q1616 18 1632 24 Q1648 30 1664 24 Q1680 18 1696 24 Q1712 30 1728 24 Q1744 18 1760 24 Q1776 30 1792 24 Q1808 18 1824 24 Q1840 30 1856 24 Q1872 18 1888 24 Q1904 30 1920 24 Q1936 18 1952 24 Q1968 30 1984 24 Q2000 18 2000 24"
+              fill="none" stroke="#d4a832" stroke-width="1.8" opacity=".75"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── 뉴로피드백 프로세스 흐름 ─── -->
+    <h3 style="font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:1.5rem;text-align:center;">뉴로피드백 치유 프로세스 — 4단계 훈련 사이클</h3>
+    <div class="nfb-flow">
+      <div class="nfb-step">
+        <div class="nfb-step-num">STEP 01</div>
+        <div class="nfb-step-icon">📡</div>
+        <div class="nfb-step-title">뇌파 측정<br>qEEG 진단</div>
+        <div class="nfb-step-body">전두엽·두정엽 전극 부착 후 안정 상태의 뇌파를 15분간 측정. Theta/Beta 비율, Alpha 파워, DMN 활성도를 정량 분석하여 ADHD·스트레스 지문을 확인합니다.</div>
+      </div>
+      <div class="nfb-step">
+        <div class="nfb-step-num">STEP 02</div>
+        <div class="nfb-step-icon">🎮</div>
+        <div class="nfb-step-title">실시간 피드백<br>뇌 학습 훈련</div>
+        <div class="nfb-step-body">뇌파 상태가 실시간으로 시청각 피드백(화면·소리)으로 변환됩니다. Theta 억제·Beta/Alpha 증가 목표에 도달할 때 보상 피드백이 주어져 뇌가 스스로 건강한 상태를 학습합니다.</div>
+      </div>
+      <div class="nfb-step">
+        <div class="nfb-step-num">STEP 03</div>
+        <div class="nfb-step-icon">🧘</div>
+        <div class="nfb-step-title">FAWA 통합<br>명상 강화</div>
+        <div class="nfb-step-body">뉴로피드백 훈련 직후 FAWA 선명상(따·몰·지·알)을 병행합니다. 뉴로피드백이 목표 뇌파 상태의 문을 열면, FAWA 명상이 그 상태를 깊이 체험하고 체화합니다.</div>
+      </div>
+      <div class="nfb-step">
+        <div class="nfb-step-num">STEP 04</div>
+        <div class="nfb-step-icon">📊</div>
+        <div class="nfb-step-title">뉴로하모니<br>효과 분석</div>
+        <div class="nfb-step-body">사전·사후 qEEG 비교, HRV Coherence 변화, 행동 척도 개선을 종합하여 뉴로하모니 리포트를 작성합니다. 치유 여행의 객관적 효과를 뇌과학으로 증명합니다.</div>
+      </div>
+    </div>
+
+    <!-- ─── 뇌파 스펙트럼 비교 분석기 ─── -->
+    <div class="spectrum-analyzer" style="margin-top:2.5rem;">
+      <div class="sa-title">뉴로하모니 스펙트럼 분석 — ADHD vs FAWA 명상 vs 뉴로피드백 후</div>
+      <div class="sa-bars">
+        <!-- Delta -->
+        <div class="sa-bar-group">
+          <div class="sa-bars-inner">
+            <div class="sa-bar adhd" style="height:22px;"></div>
+            <div class="sa-bar fawa" style="height:18px;"></div>
+            <div class="sa-bar nfb" style="height:16px;"></div>
+          </div>
+          <div class="sa-blabel">Delta</div>
+          <div class="sa-hz">1–4 Hz</div>
+        </div>
+        <!-- Theta -->
+        <div class="sa-bar-group">
+          <div class="sa-bars-inner">
+            <div class="sa-bar adhd" style="height:88px;"></div>
+            <div class="sa-bar fawa" style="height:42px;"></div>
+            <div class="sa-bar nfb" style="height:28px;"></div>
+          </div>
+          <div class="sa-blabel" style="color:#e07a80;">Theta ↓</div>
+          <div class="sa-hz">4–8 Hz</div>
+        </div>
+        <!-- Alpha -->
+        <div class="sa-bar-group">
+          <div class="sa-bars-inner">
+            <div class="sa-bar adhd" style="height:16px;"></div>
+            <div class="sa-bar fawa" style="height:62px;"></div>
+            <div class="sa-bar nfb" style="height:88px;"></div>
+          </div>
+          <div class="sa-blabel" style="color:#00d4c8;">Alpha ↑</div>
+          <div class="sa-hz">8–12 Hz</div>
+        </div>
+        <!-- SMR -->
+        <div class="sa-bar-group">
+          <div class="sa-bars-inner">
+            <div class="sa-bar adhd" style="height:14px;"></div>
+            <div class="sa-bar fawa" style="height:44px;"></div>
+            <div class="sa-bar nfb" style="height:68px;"></div>
+          </div>
+          <div class="sa-blabel" style="color:#5dba80;">SMR ↑</div>
+          <div class="sa-hz">12–15 Hz</div>
+        </div>
+        <!-- Beta -->
+        <div class="sa-bar-group">
+          <div class="sa-bars-inner">
+            <div class="sa-bar adhd" style="height:12px;"></div>
+            <div class="sa-bar fawa" style="height:36px;"></div>
+            <div class="sa-bar nfb" style="height:55px;"></div>
+          </div>
+          <div class="sa-blabel" style="color:#d4a832;">Beta ↑</div>
+          <div class="sa-hz">13–30 Hz</div>
+        </div>
+      </div>
+      <div class="sa-legend">
+        <div class="sa-leg"><div class="sa-dot" style="background:#e07a80;"></div>ADHD 패턴 (치료 전)</div>
+        <div class="sa-leg"><div class="sa-dot" style="background:#5dba80;"></div>FAWA 선명상 후</div>
+        <div class="sa-leg"><div class="sa-dot" style="background:#3ab0d8;"></div>뉴로피드백 + FAWA 통합 후</div>
+      </div>
+    </div>
+
+    <!-- ─── 뉴로하모니 측정 지표 비교표 ─── -->
+    <div class="nh-table-wrap">
+      <table class="nh-table">
+        <thead>
+          <tr>
+            <th>측정 지표</th>
+            <th>ADHD 기준치</th>
+            <th>그릿행복여행 후</th>
+            <th>FAWA 명상 후</th>
+            <th>뉴로피드백 + 통합 후</th>
+            <th>치유 메커니즘</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Theta/Beta 비율 (TBR)</td>
+            <td class="bad">높음 ↑ (주의결핍)</td>
+            <td class="mid">중간 감소</td>
+            <td class="mid">유의미한 감소</td>
+            <td class="good">현저한 감소 ↓</td>
+            <td>전두엽 자기조절 강화, 도파민 신호 안정</td>
+          </tr>
+          <tr>
+            <td>Alpha 파워 (8–12 Hz)</td>
+            <td class="bad">낮음 ↓ (이완 불가)</td>
+            <td class="mid">자연 속 증가</td>
+            <td class="good">현저한 증가 ↑</td>
+            <td class="good">최대 증가 ↑↑</td>
+            <td>DMN 진정, 부교감 활성, HRV Coherence 형성</td>
+          </tr>
+          <tr>
+            <td>SMR 파워 (12–15 Hz)</td>
+            <td class="bad">결핍 (과잉행동)</td>
+            <td class="mid">소폭 향상</td>
+            <td class="mid">향상</td>
+            <td class="good">유의미한 향상 ↑</td>
+            <td>감각운동 조절, 충동 억제 강화</td>
+          </tr>
+          <tr>
+            <td>HRV Coherence (0.1Hz)</td>
+            <td class="bad">불안정·비선형</td>
+            <td class="mid">여행 중 안정화</td>
+            <td class="good">정현파 안정 ↑</td>
+            <td class="good">최적 coherence ↑↑</td>
+            <td>심장-자율신경 동기화, 미토콘드리아 회복</td>
+          </tr>
+          <tr>
+            <td>전두엽 Alpha 비대칭</td>
+            <td class="bad">우측 우세 (부정 정서)</td>
+            <td class="mid">개선 경향</td>
+            <td class="good">균형화 ↑</td>
+            <td class="good">좌측 전환 ↑↑</td>
+            <td>긍정 정서 회로 강화, dlPFC 활성화</td>
+          </tr>
+          <tr>
+            <td>주의력 지속 시간</td>
+            <td class="bad">단축 (분산 잦음)</td>
+            <td class="mid">5주 후 개선</td>
+            <td class="good">메타주의력 향상</td>
+            <td class="good">수행검사 점수 상승</td>
+            <td>전두선조회로 강화, Theta 억제 효과 지속</td>
+          </tr>
+          <tr>
+            <td>코르티솔 (스트레스 호르몬)</td>
+            <td class="bad">상승 (만성 스트레스)</td>
+            <td class="good">자연 환경으로 감소 ↓</td>
+            <td class="good">명상으로 감소 ↓</td>
+            <td class="good">복합 감소 ↓↓</td>
+            <td>HPA 축 안정화, 미토콘드리아 산화 스트레스 완화</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ─── 뉴로하모니 3축 통합 ─── -->
+    <h3 style="font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:600;color:#fff;margin:3rem 0 1rem;text-align:center;">뉴로하모니 통합 치유 3축</h3>
+    <div class="nh-integration">
+      <div class="nh-int-cell">
+        <div class="nh-int-icon">🌿</div>
+        <div class="nh-int-label">외부 자극 · 그릿행복여행</div>
+        <div class="nh-int-title">자연이 뇌를 재설정한다</div>
+        <div class="nh-int-body">경관·온천·맨발걷기·산림 속에서 Alpha파가 자연스럽게 증가하고 Theta 과잉이 완화됩니다. 주역 여괘(旅卦)의 '유순한 변화'가 뇌파 수준에서 실현됩니다. 코르티솔 감소→미토콘드리아 회복→도파민 안정의 연쇄가 시작됩니다.</div>
+        <div class="nh-int-badge" style="color:#5dba80;border-color:rgba(93,186,128,.4);">α Alpha ↑ · 코르티솔 ↓</div>
+      </div>
+      <div class="nh-int-cell" style="background:#0a1a24;">
+        <div class="nh-int-icon">🧘</div>
+        <div class="nh-int-label">내부 훈련 · FAWA 선명상</div>
+        <div class="nh-int-title">이근원통이 뇌를 재조직한다</div>
+        <div class="nh-int-body">반문문자성(反聞聞自性) 수행이 dlPFC를 활성화하고 DMN을 비동기화합니다. FAWA 따→몰→지→알의 각 단계가 뇌파 상태를 단계적으로 변화시킵니다. HRV Coherence 형성과 함께 능엄경의 '적멸 현전'이 Alpha 파 우세로 나타납니다.</div>
+        <div class="nh-int-badge" style="color:#00d4c8;border-color:rgba(0,210,200,.4);">dlPFC ↑ · DMN ↓ · HRV ↑</div>
+      </div>
+      <div class="nh-int-cell">
+        <div class="nh-int-icon">🔬</div>
+        <div class="nh-int-label">과학적 검증 · 뉴로피드백</div>
+        <div class="nh-int-title">뉴로피드백이 변화를 가속한다</div>
+        <div class="nh-int-body">qEEG로 치유 전후를 객관적으로 측정하고, 실시간 피드백으로 뇌파 최적화를 가속합니다. 뉴로피드백이 목표 뇌파의 문을 열면 FAWA 명상이 그 상태를 체화합니다. 팔머의 브레인에너지 회복이 측정치로 확인됩니다.</div>
+        <div class="nh-int-badge" style="color:#3ab0d8;border-color:rgba(58,176,216,.4);">Theta ↓ · Beta ↑ · 효과 검증</div>
+      </div>
+    </div>
+
+    <!-- ─── 임상 근거 ─── -->
+    <h3 style="font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:600;color:#fff;margin:3rem 0 1rem;text-align:center;">뉴로피드백 × 명상 × 치유관광 — 검증된 근거</h3>
+    <div class="nfb-ev-grid">
+      <div class="nfb-ev">
+        <div class="nfb-ev-icon">📋</div>
+        <div class="nfb-ev-src">Brain & Behavior · Ölçüoğlu 2025</div>
+        <div class="nfb-ev-title">qEEG로 ADHD의 전자기적 지문 확인</div>
+        <div class="nfb-ev-body">정량뇌파(qEEG)가 전두-선조체 네트워크에서 ADHD 특유의 Theta/Beta 불균형을 밀리초 해상도로 지도화. 뉴로피드백이 이 불균형을 직접 교정함을 확인.</div>
+      </div>
+      <div class="nfb-ev">
+        <div class="nfb-ev-icon">🎯</div>
+        <div class="nfb-ev-src">PMC · Neurofeedback Review 2016</div>
+        <div class="nfb-ev-title">Theta 억제/Beta 강화로 ADHD 3증상 개선</div>
+        <div class="nfb-ev-body">뉴로피드백 θ/β 훈련이 부주의·과잉행동·충동성 모두를 유의미하게 감소시킴 (F=330.63, p&lt;0.001). 치료 완료 8주 후에도 효과가 지속.</div>
+      </div>
+      <div class="nfb-ev">
+        <div class="nfb-ev-icon">🧪</div>
+        <div class="nfb-ev-src">한국산학기술학회 2017</div>
+        <div class="nfb-ev-title">성인 ADHD: 뉴로피드백 4주로 Beta↑ θ/β↓</div>
+        <div class="nfb-ev-body">성인 ADHD 성향 대학생 대상 4주 훈련 후 Beta파 유의 증가, Theta/Beta 비율 유의 감소. 5주 추수연구에서 주의력 향상 효과 지속 확인.</div>
+      </div>
+      <div class="nfb-ev">
+        <div class="nfb-ev-icon">💡</div>
+        <div class="nfb-ev-src">PubMed · RCT 웨어러블 뉴로피드백 2024</div>
+        <div class="nfb-ev-title">뉴로피드백 보조 명상 → 스트레스 주관적 감소</div>
+        <div class="nfb-ev-body">무작위 이중맹검 대조 연구에서 뉴로피드백 보조 명상군이 비보조 명상군보다 주관적 스트레스 감소 효과가 유의미하게 큼 (p=0.037). Alpha·Theta·Beta 실시간 피드백 활용.</div>
+      </div>
+      <div class="nfb-ev">
+        <div class="nfb-ev-icon">🏯</div>
+        <div class="nfb-ev-src">한의신문 · 동의신경정신과학회지 2024</div>
+        <div class="nfb-ev-title">한국 ADHD 아동: SMR·Beta 강화로 개선</div>
+        <div class="nfb-ev-body">소아 ADHD 뉴로피드백 훈련 결과 Theta 억제, SMR·Beta 파워 증대로 ACRS·KOLRA·K-ARS 척도에서 유의미한 개선. "뉴로피드백은 한의명상요법과 유사한 원리."</div>
+      </div>
+      <div class="nfb-ev">
+        <div class="nfb-ev-icon">🔗</div>
+        <div class="nfb-ev-src">ScienceDirect · Alpha/Theta NFB 2025</div>
+        <div class="nfb-ev-title">Alpha/Theta 뉴로피드백으로 불안·충동성 개선</div>
+        <div class="nfb-ev-body">Alpha·Theta 뉴로피드백이 불안, 우울 기분, 감정 조절, 충동성을 개선. EEG 기반 마음챙김이 Gamma 파워 증가를 통해 불안 감소에 기여함을 확인.</div>
+      </div>
+    </div>
+
+    <!-- ─── 뉴로하모니 리포트 개념 ─── -->
+    <div style="margin-top:3rem;background:rgba(0,0,0,.25);border:1px solid rgba(0,210,200,.12);border-radius:var(--r);padding:2.5rem;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;">
+        <div>
+          <div style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;color:rgba(0,210,200,.6);margin-bottom:.8rem;">NEUROHARMONY REPORT</div>
+          <div style="font-family:'Noto Serif KR',serif;font-size:1.1rem;font-weight:600;color:#fff;margin-bottom:1rem;">뉴로하모니 치유 리포트</div>
+          <p style="font-size:.85rem;line-height:2;color:rgba(255,255,255,.6);">
+            그릿행복여행과 FAWA 선명상 전후의 뇌파 변화를 정량화하여 참가자 개인에게 제공되는 뉴로하모니 리포트는 치유 여행의 과학적 증거입니다. qEEG 뇌지도, HRV Coherence 그래프, 행동 척도 사전·사후 비교가 포함됩니다.
+          </p>
+        </div>
+        <div>
+          <div style="display:flex;flex-direction:column;gap:.8rem;">
+            <div style="display:flex;align-items:center;gap:1rem;padding:.8rem 1rem;background:rgba(0,210,200,.06);border-radius:8px;border:1px solid rgba(0,210,200,.12);">
+              <span style="font-size:1.2rem;">📊</span>
+              <div>
+                <div style="font-family:'DM Mono',monospace;font-size:.6rem;color:rgba(0,210,200,.7);letter-spacing:.1em;margin-bottom:.2rem;">PRE-POST qEEG</div>
+                <div style="font-size:.8rem;color:rgba(255,255,255,.7);">여행·명상 전후 뇌파 대역별 파워 변화</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:1rem;padding:.8rem 1rem;background:rgba(0,210,200,.06);border-radius:8px;border:1px solid rgba(0,210,200,.12);">
+              <span style="font-size:1.2rem;">💓</span>
+              <div>
+                <div style="font-family:'DM Mono',monospace;font-size:.6rem;color:rgba(0,210,200,.7);letter-spacing:.1em;margin-bottom:.2rem;">HRV COHERENCE</div>
+                <div style="font-size:.8rem;color:rgba(255,255,255,.7);">심박변이도 Coherence 0.1Hz 형성 추적</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:1rem;padding:.8rem 1rem;background:rgba(0,210,200,.06);border-radius:8px;border:1px solid rgba(0,210,200,.12);">
+              <span style="font-size:1.2rem;">🧠</span>
+              <div>
+                <div style="font-family:'DM Mono',monospace;font-size:.6rem;color:rgba(0,210,200,.7);letter-spacing:.1em;margin-bottom:.2rem;">BRAIN MAPPING</div>
+                <div style="font-size:.8rem;color:rgba(255,255,255,.7);">64채널 전두엽·두정엽 뇌지도 시각화</div>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:1rem;padding:.8rem 1rem;background:rgba(0,210,200,.06);border-radius:8px;border:1px solid rgba(0,210,200,.12);">
+              <span style="font-size:1.2rem;">📈</span>
+              <div>
+                <div style="font-family:'DM Mono',monospace;font-size:.6rem;color:rgba(0,210,200,.7);letter-spacing:.1em;margin-bottom:.2rem;">GRIT SCORE</div>
+                <div style="font-size:.8rem;color:rgba(255,255,255,.7);">그릿 척도·주의력 행동검사 사전사후 비교</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="callout">
+  <div class="wrap">
+    <blockquote>
+      주역은 3천 년 전에 이미 알고 있었다.<br>
+      <strong>여행이 사람을 변화시키고</strong>,<br>
+      귀를 돌이켜 내면을 들을 때 <strong>치유가 시작된다</strong>고.<br>
+      미토콘드리아가 그 과학적 열쇠이며,<br>
+      <strong>치유관광의 시대</strong>가 지금 열리고 있다.<br>
+      그리고 <strong>뉴로피드백이 그 치유를 증명한다.</strong>
+    </blockquote>
+    <cite>— 이용근 교수, K-MediWell 그릿행복여행 · 강태원, FAWA 선명상</cite>
+    <br>
+    <a class="cta-btn" href="http://www.kmediwell.kr/" target="_blank">K-MediWell 그릿행복여행 →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <strong>치유관광의 시대</strong> · 주역 × 이근원통 × 브레인에너지 × 뉴로하모니 × 뉴로피드백 × 그릿행복여행<br>
+  이용근 교수 · <a href="http://www.kmediwell.kr/" target="_blank">www.kmediwell.kr</a><br>
+  강태원 「FAWA 선명상 수행의 단계별 신경생리학적 메커니즘 분석」 · 「이근원통 기반 FAWA 선명상 통합 수행 체계」<br>
+  Christopher M. Palmer, <em>Brain Energy</em> (2022) · 하버드 의과대학 정신의학과<br>
+  치유관광산업 육성에 관한 법률 (2025.03.19 국회 통과) · 문화체육관광부<br>
+  Cairncross & Miller (2019) · Scientific Reports (2023) · Brain Sciences (2023)<br>
+  Ölçüoğlu, Brain & Behavior (2025) · PMC Neurofeedback Review (2016) · 한국산학기술학회 (2017) · PubMed NFB-Meditation RCT (2024)<br>
+  <span style="opacity:.5;font-size:.7rem;">※ 본 자료는 교육·연구 목적으로 제작되었으며, 의학적 진료를 대신하지 않습니다.</span>
+</footer>
+
+</body>
+</html>
