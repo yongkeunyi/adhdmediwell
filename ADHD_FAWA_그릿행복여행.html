@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADHD 치유 × FAWA 선명상 × K-MediWell 그릿행복여행</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#faf7f2;
+  --warm:#f2ede4;
+  --deep:#1a1410;
+  --brown:#5c3d2e;
+  --forest:#2d5a3d;
+  --forest-l:#4a8c62;
+  --sky:#1a6b8a;
+  --sky-l:#3ab0d8;
+  --gold:#c8922a;
+  --gold-l:#e8b84b;
+  --rose:#b5434a;
+  --rose-l:#e07a80;
+  --violet:#6b4fa0;
+  --violet-l:#9b7fcb;
+  --muted:rgba(26,20,16,0.55);
+  --border:rgba(26,20,16,0.1);
+  --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--cream);
+  color:var(--deep);
+  font-family:'Noto Sans KR',sans-serif;
+  font-weight:300;
+  line-height:1.8;
+  overflow-x:hidden;
+}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:var(--warm);}
+::-webkit-scrollbar-thumb{background:var(--forest);border-radius:2px;}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 2.5rem;
+  background:rgba(250,247,242,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{
+  font-family:'Playfair Display',serif;
+  font-size:1rem;color:var(--forest);letter-spacing:.05em;
+}
+.nav-links{display:flex;gap:1.8rem;list-style:none;}
+.nav-links a{
+  color:var(--muted);text-decoration:none;font-size:.75rem;
+  letter-spacing:.06em;transition:color .3s;
+}
+.nav-links a:hover{color:var(--forest);}
+@media(max-width:640px){.nav-links{display:none;}}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  display:grid;grid-template-columns:1fr 1fr;
+  overflow:hidden;
+}
+@media(max-width:800px){.hero{grid-template-columns:1fr;}}
+
+.hero-left{
+  display:flex;flex-direction:column;
+  justify-content:center;
+  padding:8rem 4rem 4rem 4rem;
+  background:var(--forest);
+  position:relative;overflow:hidden;
+}
+.hero-left::before{
+  content:'';position:absolute;
+  bottom:-80px;right:-80px;
+  width:350px;height:350px;border-radius:50%;
+  background:rgba(255,255,255,.04);
+}
+.hero-left::after{
+  content:'';position:absolute;
+  top:20%;left:-40px;
+  width:200px;height:200px;border-radius:50%;
+  background:rgba(255,255,255,.03);
+}
+.hero-tag{
+  font-family:'DM Mono',monospace;
+  font-size:.65rem;letter-spacing:.3em;
+  color:rgba(255,255,255,.5);
+  text-transform:uppercase;margin-bottom:1.2rem;
+  opacity:0;animation:rise .8s ease .2s forwards;
+}
+.hero-h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.2rem,5vw,3.8rem);
+  font-weight:700;line-height:1.15;
+  color:#fff;margin-bottom:1.5rem;
+  opacity:0;animation:rise .9s ease .4s forwards;
+}
+.hero-h1 em{
+  font-style:italic;color:var(--gold-l);
+}
+.hero-sub{
+  font-size:.95rem;line-height:2;
+  color:rgba(255,255,255,.72);
+  max-width:420px;margin-bottom:2rem;
+  opacity:0;animation:rise .9s ease .6s forwards;
+}
+.hero-badges{
+  display:flex;flex-wrap:wrap;gap:.5rem;
+  opacity:0;animation:rise .9s ease .8s forwards;
+}
+.hbadge{
+  padding:.25rem .8rem;border-radius:20px;font-size:.68rem;
+  letter-spacing:.08em;border:1px solid rgba(255,255,255,.2);
+  color:rgba(255,255,255,.8);background:rgba(255,255,255,.08);
+}
+
+.hero-right{
+  position:relative;overflow:hidden;
+  background:var(--warm);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:8rem 3rem 4rem;
+}
+.hero-right::before{
+  content:'GRIT';
+  position:absolute;
+  font-family:'Playfair Display',serif;
+  font-size:18rem;font-weight:700;
+  color:rgba(45,90,61,.05);
+  line-height:1;
+  right:-2rem;bottom:-2rem;
+  pointer-events:none;
+}
+
+.stat-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--border);
+  border:1px solid var(--border);border-radius:var(--r);
+  overflow:hidden;
+  opacity:0;animation:rise 1s ease .5s forwards;
+}
+.stat-cell{
+  background:var(--cream);padding:1.8rem;
+  text-align:center;
+}
+.stat-num{
+  font-family:'Playfair Display',serif;
+  font-size:2.2rem;font-weight:700;
+  line-height:1;margin-bottom:.4rem;
+}
+.stat-cell:nth-child(1) .stat-num{color:var(--forest);}
+.stat-cell:nth-child(2) .stat-num{color:var(--sky);}
+.stat-cell:nth-child(3) .stat-num{color:var(--gold);}
+.stat-cell:nth-child(4) .stat-num{color:var(--rose);}
+.stat-lbl{font-size:.75rem;color:var(--muted);line-height:1.5;}
+
+.hero-quote{
+  margin-top:2rem;
+  padding:1.5rem;
+  background:var(--forest);border-radius:var(--r);
+  opacity:0;animation:rise 1s ease .7s forwards;
+}
+.hero-quote p{
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-size:.95rem;
+  color:rgba(255,255,255,.88);line-height:1.8;
+}
+.hero-quote cite{
+  display:block;margin-top:.8rem;
+  font-size:.68rem;color:var(--gold-l);
+  font-style:normal;letter-spacing:.1em;
+  font-family:'DM Mono',monospace;
+}
+
+@keyframes rise{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+
+/* ── LAYOUT ── */
+.wrap{max-width:1120px;margin:0 auto;padding:0 2rem;}
+.section{padding:6rem 0;}
+
+.sec-tag{
+  font-family:'DM Mono',monospace;font-size:.63rem;
+  letter-spacing:.25em;color:var(--forest);
+  text-transform:uppercase;margin-bottom:.8rem;
+}
+.sec-h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.7rem,3.5vw,2.5rem);
+  font-weight:700;line-height:1.2;
+  margin-bottom:1.2rem;color:var(--deep);
+}
+.sec-h2 em{font-style:italic;color:var(--forest);}
+.sec-lead{
+  font-size:.98rem;line-height:2.1;
+  color:var(--muted);max-width:680px;
+}
+
+/* ── BAND DIVIDERS ── */
+.band{
+  padding:4rem 0;
+  position:relative;overflow:hidden;
+}
+.band-forest{background:var(--forest);}
+.band-sky{background:var(--sky);}
+.band-gold{background:var(--gold);}
+.band-warm{background:var(--warm);}
+
+/* ── ADHD PANELS ── */
+.adhd-grid{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;
+  margin-top:3rem;
+}
+@media(max-width:800px){.adhd-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:500px){.adhd-grid{grid-template-columns:1fr;}}
+
+.adhd-card{
+  padding:2rem;border-radius:var(--r);
+  border:1px solid var(--border);
+  background:#fff;
+  transition:transform .3s,box-shadow .3s;
+}
+.adhd-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08);}
+.ac-icon{font-size:2rem;margin-bottom:1rem;}
+.ac-tag{
+  font-family:'DM Mono',monospace;font-size:.6rem;
+  letter-spacing:.18em;margin-bottom:.5rem;
+}
+.ac-title{
+  font-family:'Noto Serif KR',serif;font-size:1rem;
+  font-weight:600;margin-bottom:.7rem;color:var(--deep);
+}
+.ac-body{font-size:.85rem;line-height:1.9;color:var(--muted);}
+.ac-chip{
+  display:inline-block;margin-top:.8rem;
+  padding:.2rem .7rem;border-radius:20px;
+  font-size:.65rem;letter-spacing:.08em;
+  font-family:'DM Mono',monospace;
+}
+
+/* ── NEUROHARMONY SPECTRUM ── */
+.nh-wrap{
+  margin-top:3rem;
+  border-radius:var(--r);overflow:hidden;
+  border:1px solid var(--border);
+  background:#fff;
+}
+.nh-header{
+  padding:1.5rem 2rem;
+  background:var(--forest);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.nh-title{
+  font-family:'Playfair Display',serif;
+  font-size:1.1rem;color:#fff;
+}
+.nh-sub{
+  font-family:'DM Mono',monospace;font-size:.6rem;
+  color:rgba(255,255,255,.6);letter-spacing:.15em;
+}
+.nh-body{padding:2rem;}
+
+/* Wave display */
+.wave-row{margin-bottom:1rem;}
+.wave-label-row{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:.4rem;
+}
+.wlbl{font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.12em;}
+.wave-track{
+  height:56px;background:var(--warm);border-radius:8px;
+  overflow:hidden;position:relative;
+}
+.wave-svg{width:200%;height:100%;}
+.w-adhd{animation:wslide 3s linear infinite;}
+.w-med{animation:wslide 1.8s linear infinite;}
+@keyframes wslide{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* Spectrum bars */
+.spec-grid{
+  display:flex;gap:1.5rem;justify-content:center;
+  padding:2rem 0;flex-wrap:wrap;
+}
+.spec-col{text-align:center;min-width:80px;}
+.bar-group{
+  display:flex;gap:4px;align-items:flex-end;
+  justify-content:center;height:80px;margin-bottom:.5rem;
+}
+.bar{width:20px;border-radius:3px 3px 0 0;position:relative;}
+.bar::after{
+  content:'';position:absolute;top:0;left:0;right:0;
+  height:25%;border-radius:3px 3px 0 0;
+  background:rgba(255,255,255,.3);
+}
+.b-adhd{background:linear-gradient(to top,var(--rose),var(--rose-l));}
+.b-norm{background:linear-gradient(to top,var(--sky),var(--sky-l));}
+.b-fawa{background:linear-gradient(to top,var(--forest),var(--forest-l));}
+.slbl{font-size:.68rem;color:var(--deep);font-weight:500;}
+.shz{font-size:.6rem;color:var(--muted);margin-top:.2rem;}
+
+.spec-legend{
+  display:flex;gap:1.5rem;justify-content:center;
+  padding-top:1rem;border-top:1px solid var(--border);flex-wrap:wrap;
+}
+.leg{display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:var(--muted);}
+.ldot{width:10px;height:10px;border-radius:50%;}
+
+/* ── HRV TABLE ── */
+.tbl-wrap{
+  margin-top:2.5rem;
+  border:1px solid var(--border);border-radius:var(--r);
+  overflow:hidden;background:#fff;
+}
+table{width:100%;border-collapse:collapse;}
+thead th{
+  padding:.9rem 1.3rem;
+  font-family:'DM Mono',monospace;font-size:.6rem;
+  letter-spacing:.15em;color:#fff;
+  background:var(--sky);text-align:left;
+}
+tbody td{
+  padding:.9rem 1.3rem;font-size:.83rem;
+  border-bottom:1px solid var(--border);
+  color:var(--muted);vertical-align:top;line-height:1.7;
+}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr:hover td{background:rgba(26,107,138,.04);}
+td:first-child{
+  font-family:'Noto Serif KR',serif;font-weight:600;
+  color:var(--deep);white-space:nowrap;
+}
+
+/* ── FAWA STEPS ── */
+.fawa-wrap{margin-top:3rem;}
+.fawa-item{
+  display:grid;grid-template-columns:260px 1fr;
+  gap:0;margin-bottom:3px;border-radius:var(--r);
+  overflow:hidden;transition:transform .3s;
+}
+.fawa-item:hover{transform:translateX(5px);}
+@media(max-width:700px){.fawa-item{grid-template-columns:1fr;}}
+
+.fi-left{
+  padding:2.5rem 2rem;
+  display:flex;flex-direction:column;justify-content:center;
+}
+.fi-right{
+  padding:2.5rem;background:#fff;
+  border:1px solid var(--border);border-left:none;
+  border-radius:0 var(--r) var(--r) 0;
+}
+@media(max-width:700px){
+  .fi-right{border-left:1px solid var(--border);border-top:none;border-radius:0 0 var(--r) var(--r);}
+  .fi-left{border-radius:var(--r) var(--r) 0 0;}
+}
+
+.fi-num{
+  font-family:'Playfair Display',serif;
+  font-size:4rem;font-weight:700;
+  line-height:1;opacity:.15;color:#fff;
+  margin-bottom:.5rem;
+}
+.fi-kr{
+  font-family:'Noto Serif KR',serif;
+  font-size:2.2rem;font-weight:700;color:#fff;
+  margin-bottom:.2rem;
+}
+.fi-en{
+  font-family:'DM Mono',monospace;font-size:.62rem;
+  letter-spacing:.2em;color:rgba(255,255,255,.55);
+}
+.fi-igeun{
+  margin-top:.8rem;
+  font-family:'DM Mono',monospace;font-size:.6rem;
+  letter-spacing:.08em;color:rgba(255,255,255,.5);
+  padding:.25rem .6rem;background:rgba(255,255,255,.08);
+  border-radius:4px;display:inline-block;
+}
+
+.f1 .fi-left{background:linear-gradient(135deg,#2d5a3d,#1f4029);}
+.f2 .fi-left{background:linear-gradient(135deg,#1a6b8a,#114d65);}
+.f3 .fi-left{background:linear-gradient(135deg,#c8922a,#9a6e1e);}
+.f4 .fi-left{background:linear-gradient(135deg,#6b4fa0,#4a3570);}
+
+.fi-rtitle{
+  font-family:'Noto Serif KR',serif;font-size:1.05rem;
+  font-weight:600;color:var(--deep);margin-bottom:.7rem;
+}
+.fi-rbody{font-size:.86rem;line-height:1.95;color:var(--muted);margin-bottom:1rem;}
+.fi-rbody strong{color:var(--deep);}
+.fi-adhd{
+  padding:.6rem 1rem;border-radius:8px;
+  font-size:.8rem;line-height:1.7;
+  margin-bottom:1rem;
+}
+.f1 .fi-adhd{background:rgba(45,90,61,.07);border-left:3px solid var(--forest);}
+.f2 .fi-adhd{background:rgba(26,107,138,.07);border-left:3px solid var(--sky);}
+.f3 .fi-adhd{background:rgba(200,146,42,.07);border-left:3px solid var(--gold);}
+.f4 .fi-adhd{background:rgba(107,79,160,.07);border-left:3px solid var(--violet);}
+.fi-adhd-lbl{
+  font-family:'DM Mono',monospace;font-size:.58rem;
+  letter-spacing:.15em;margin-bottom:.3rem;
+}
+.f1 .fi-adhd-lbl{color:var(--forest);}
+.f2 .fi-adhd-lbl{color:var(--sky);}
+.f3 .fi-adhd-lbl{color:var(--gold);}
+.f4 .fi-adhd-lbl{color:var(--violet);}
+
+.fi-chips{display:flex;flex-wrap:wrap;gap:.35rem;}
+.fi-chip{
+  padding:.15rem .6rem;border-radius:12px;
+  font-size:.62rem;background:var(--warm);
+  border:1px solid var(--border);color:var(--muted);
+}
+
+/* ── GRIT FRAMEWORK ── */
+.grit-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;
+  margin-top:3rem;
+}
+@media(max-width:800px){.grit-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:500px){.grit-grid{grid-template-columns:1fr;}}
+
+.grit-card{
+  padding:2rem 1.5rem;border-radius:var(--r);
+  border:1px solid var(--border);background:#fff;
+  text-align:center;position:relative;overflow:hidden;
+  transition:transform .3s,box-shadow .3s;
+}
+.grit-card:hover{transform:translateY(-5px);box-shadow:0 15px 50px rgba(0,0,0,.09);}
+.grit-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+}
+.g1::before{background:var(--forest);}
+.g2::before{background:var(--sky);}
+.g3::before{background:var(--gold);}
+.g4::before{background:var(--rose);}
+
+.gc-letter{
+  font-family:'Playfair Display',serif;
+  font-size:3.5rem;font-weight:700;
+  line-height:1;margin-bottom:.5rem;
+  opacity:.12;
+}
+.g1 .gc-letter{color:var(--forest);}
+.g2 .gc-letter{color:var(--sky);}
+.g3 .gc-letter{color:var(--gold);}
+.g4 .gc-letter{color:var(--rose);}
+
+.gc-word{
+  font-family:'DM Mono',monospace;font-size:.65rem;
+  letter-spacing:.2em;margin-bottom:.5rem;
+}
+.g1 .gc-word{color:var(--forest);}
+.g2 .gc-word{color:var(--sky);}
+.g3 .gc-word{color:var(--gold);}
+.g4 .gc-word{color:var(--rose);}
+
+.gc-kr{
+  font-family:'Noto Serif KR',serif;
+  font-size:1.15rem;font-weight:600;
+  color:var(--deep);margin-bottom:.7rem;
+}
+.gc-body{font-size:.82rem;line-height:1.9;color:var(--muted);}
+.gc-fawa{
+  margin-top:1rem;padding:.4rem .8rem;
+  border-radius:6px;font-size:.68rem;
+  color:var(--muted);background:var(--warm);
+  font-style:italic;
+}
+
+/* ── JOURNEY MAP ── */
+.journey{
+  margin-top:3rem;
+  position:relative;
+}
+.journey-line{
+  position:absolute;
+  top:50px;left:0;right:0;height:2px;
+  background:linear-gradient(to right,var(--forest),var(--sky),var(--gold),var(--rose),var(--violet));
+  opacity:.3;z-index:0;
+}
+.journey-stops{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:1rem;position:relative;z-index:1;
+}
+@media(max-width:700px){
+  .journey-stops{grid-template-columns:1fr;}
+  .journey-line{display:none;}
+}
+
+.jstop{text-align:center;padding:0 .5rem;}
+.j-dot{
+  width:48px;height:48px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1rem;font-size:1.2rem;
+  border:2px solid var(--border);
+  background:var(--cream);
+  box-shadow:0 4px 16px rgba(0,0,0,.08);
+}
+.jstop:nth-child(1) .j-dot{background:var(--forest);color:#fff;border-color:var(--forest);}
+.jstop:nth-child(2) .j-dot{background:var(--sky);color:#fff;border-color:var(--sky);}
+.jstop:nth-child(3) .j-dot{background:var(--gold);color:#fff;border-color:var(--gold);}
+.jstop:nth-child(4) .j-dot{background:var(--rose);color:#fff;border-color:var(--rose);}
+.jstop:nth-child(5) .j-dot{background:var(--violet);color:#fff;border-color:var(--violet);}
+
+.j-title{
+  font-family:'Noto Serif KR',serif;font-size:.9rem;
+  font-weight:600;color:var(--deep);margin-bottom:.4rem;
+}
+.j-body{font-size:.75rem;line-height:1.8;color:var(--muted);}
+
+/* ── EVIDENCE CARDS ── */
+.ev-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;
+  margin-top:3rem;
+}
+@media(max-width:800px){.ev-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:500px){.ev-grid{grid-template-columns:1fr;}}
+
+.ev-card{
+  padding:1.8rem;border-radius:var(--r);
+  border:1px solid var(--border);background:#fff;
+  transition:transform .3s,box-shadow .3s;
+}
+.ev-card:hover{transform:translateY(-3px);box-shadow:0 10px 35px rgba(0,0,0,.08);}
+.ev-icon{font-size:1.6rem;margin-bottom:.8rem;}
+.ev-src{
+  font-family:'DM Mono',monospace;font-size:.58rem;
+  letter-spacing:.15em;color:var(--forest);margin-bottom:.4rem;
+}
+.ev-claim{
+  font-family:'Noto Serif KR',serif;font-size:.95rem;
+  font-weight:600;color:var(--deep);margin-bottom:.5rem;line-height:1.4;
+}
+.ev-body{font-size:.78rem;line-height:1.85;color:var(--muted);}
+
+/* ── KMEDIWELL ── */
+.kmw-hero{
+  background:linear-gradient(135deg,var(--forest) 0%,#1f4d30 50%,var(--sky) 100%);
+  padding:5rem 0;text-align:center;
+}
+.kmw-logo{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,5vw,3.5rem);
+  font-weight:700;color:#fff;
+  letter-spacing:.05em;margin-bottom:.8rem;
+}
+.kmw-logo span{color:var(--gold-l);}
+.kmw-sub{
+  font-size:1rem;color:rgba(255,255,255,.75);
+  max-width:600px;margin:0 auto 2.5rem;line-height:1.9;
+}
+.kmw-pills{
+  display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;
+}
+.kmw-pill{
+  padding:.3rem 1rem;border-radius:20px;font-size:.72rem;
+  border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);
+  letter-spacing:.08em;
+}
+
+.kmw-prog-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;
+  margin-top:3rem;
+}
+@media(max-width:800px){.kmw-prog-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:500px){.kmw-prog-grid{grid-template-columns:1fr;}}
+
+.prog-card{
+  padding:2rem;border-radius:var(--r);
+  border:1px solid var(--border);background:#fff;
+  transition:transform .3s,box-shadow .3s;
+}
+.prog-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08);}
+.prog-day{
+  font-family:'DM Mono',monospace;font-size:.6rem;
+  letter-spacing:.2em;color:var(--forest);margin-bottom:.5rem;
+}
+.prog-title{
+  font-family:'Noto Serif KR',serif;font-size:1rem;
+  font-weight:600;color:var(--deep);margin-bottom:.8rem;
+}
+.prog-items{list-style:none;}
+.prog-items li{
+  font-size:.82rem;color:var(--muted);padding:.35rem 0;
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:flex-start;gap:.6rem;
+}
+.prog-items li:last-child{border-bottom:none;}
+.prog-items li::before{
+  content:'→';color:var(--forest);
+  font-family:'DM Mono',monospace;font-size:.7rem;
+  flex-shrink:0;margin-top:.1rem;
+}
+
+/* ── PROFESSOR CARD ── */
+.prof-band{
+  background:var(--warm);padding:5rem 0;
+}
+.prof-card{
+  max-width:900px;margin:0 auto;
+  display:grid;grid-template-columns:auto 1fr;gap:3rem;
+  align-items:center;
+  background:#fff;border-radius:var(--r);
+  padding:3rem;border:1px solid var(--border);
+  box-shadow:0 4px 30px rgba(0,0,0,.06);
+}
+@media(max-width:640px){.prof-card{grid-template-columns:1fr;}}
+
+.prof-avatar{
+  width:120px;height:120px;border-radius:50%;
+  background:linear-gradient(135deg,var(--forest),var(--sky));
+  display:flex;align-items:center;justify-content:center;
+  font-size:3rem;flex-shrink:0;
+}
+.prof-name{
+  font-family:'Playfair Display',serif;
+  font-size:1.5rem;font-weight:700;
+  color:var(--deep);margin-bottom:.4rem;
+}
+.prof-title-txt{
+  font-family:'DM Mono',monospace;font-size:.65rem;
+  letter-spacing:.15em;color:var(--forest);margin-bottom:1.2rem;
+}
+.prof-bio{font-size:.88rem;line-height:2;color:var(--muted);margin-bottom:1.2rem;}
+.prof-tags{display:flex;flex-wrap:wrap;gap:.4rem;}
+.prof-tag{
+  padding:.2rem .7rem;border-radius:12px;
+  font-size:.65rem;background:var(--warm);
+  border:1px solid var(--border);color:var(--muted);
+}
+
+/* ── TRANSFORM ── */
+.transform-wrap{
+  display:grid;grid-template-columns:1fr auto 1fr;
+  gap:2rem;align-items:center;margin-top:3rem;
+}
+@media(max-width:640px){.transform-wrap{grid-template-columns:1fr;}}
+.tr-box{padding:2rem;border-radius:var(--r);border:1px solid var(--border);}
+.tr-box.before{background:rgba(181,67,74,.05);border-color:rgba(181,67,74,.2);}
+.tr-box.after{background:rgba(45,90,61,.05);border-color:rgba(45,90,61,.2);}
+.tr-label{
+  font-family:'DM Mono',monospace;font-size:.6rem;
+  letter-spacing:.2em;margin-bottom:.5rem;
+}
+.tr-box.before .tr-label{color:var(--rose);}
+.tr-box.after .tr-label{color:var(--forest);}
+.tr-title{
+  font-family:'Noto Serif KR',serif;font-size:1.05rem;
+  font-weight:600;margin-bottom:.8rem;
+}
+.tr-box.before .tr-title{color:var(--rose);}
+.tr-box.after .tr-title{color:var(--forest);}
+.tr-list{list-style:none;}
+.tr-list li{
+  font-size:.83rem;color:var(--muted);padding:.3rem 0;
+  border-bottom:1px solid var(--border);
+}
+.tr-list li:last-child{border-bottom:none;}
+.tr-arrow{text-align:center;font-size:2rem;color:var(--forest);}
+
+/* ── CALLOUT QUOTE ── */
+.callout{
+  padding:6rem 0;text-align:center;
+  background:var(--forest);position:relative;overflow:hidden;
+}
+.callout::before{
+  content:'';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:600px;height:600px;border-radius:50%;
+  background:rgba(255,255,255,.03);
+}
+.callout blockquote{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:clamp(1.2rem,3vw,2rem);
+  line-height:1.8;
+  max-width:700px;margin:0 auto 1.5rem;
+  color:rgba(255,255,255,.92);
+}
+.callout blockquote strong{
+  font-style:normal;color:var(--gold-l);
+}
+.callout cite{
+  font-family:'DM Mono',monospace;font-size:.68rem;
+  letter-spacing:.18em;color:rgba(255,255,255,.5);
+  font-style:normal;
+}
+.callout-link{
+  display:inline-block;margin-top:2rem;
+  padding:.7rem 2rem;border-radius:30px;
+  background:var(--gold);color:#fff;
+  text-decoration:none;font-size:.8rem;
+  letter-spacing:.1em;transition:background .3s;
+  font-family:'DM Mono',monospace;
+}
+.callout-link:hover{background:var(--gold-l);color:var(--deep);}
+
+/* ── FOOTER ── */
+footer{
+  padding:3rem 2rem;text-align:center;
+  border-top:1px solid var(--border);
+  font-size:.75rem;color:var(--muted);line-height:2.2;
+  background:var(--cream);
+}
+footer a{color:var(--forest);text-decoration:none;}
+footer strong{color:var(--deep);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">K-MediWell 그릿행복여행</span>
+  <ul class="nav-links">
+    <li><a href="#adhd">ADHD 뇌과학</a></li>
+    <li><a href="#fawa">FAWA 명상</a></li>
+    <li><a href="#neuro">뉴로하모니</a></li>
+    <li><a href="#grit">그릿행복여행</a></li>
+    <li><a href="#kmediwell">K-MediWell</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-left">
+    <p class="hero-tag">이용근 교수 · K-MediWell 그릿행복여행</p>
+    <h1 class="hero-h1">
+      명상이<br><em>ADHD를</em><br>치유한다
+    </h1>
+    <p class="hero-sub">
+      FAWA 선명상 × 뉴로하모니 뇌과학 분석 ×<br>
+      그릿(GRIT)의 열정과 끈기로 완성하는<br>
+      K-MediWell 그릿행복여행 통합 프레임
+    </p>
+    <div class="hero-badges">
+      <span class="hbadge">이근원통(耳根圓通)</span>
+      <span class="hbadge">신경가소성</span>
+      <span class="hbadge">HRV Coherence</span>
+      <span class="hbadge">그릿(GRIT)</span>
+      <span class="hbadge">웰니스투어리즘</span>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="stat-grid">
+      <div class="stat-cell">
+        <div class="stat-num">82만</div>
+        <div class="stat-lbl">국내 성인 ADHD<br>추정 환자 수</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">8주</div>
+        <div class="stat-lbl">UCLA MAPs 명상<br>집중력 개선 기간</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">0.846</div>
+        <div class="stat-lbl">마음챙김 효과크기<br>(메타분석 2015)</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">24%</div>
+        <div class="stat-lbl">의료·웰니스 관광<br>연간 소비 성장률</div>
+      </div>
+    </div>
+    <div class="hero-quote">
+      <p>"재능보다 <strong style="font-style:normal;color:#e8b84b;">열정과 끈기(GRIT)</strong>가 훌륭한 삶을 이끈다. 그릿은 선천적이 아니며, 명상과 수행이라는 반복 훈련을 통해 뇌에 새겨진다."</p>
+      <cite>— Angela Duckworth, GRIT (2016) · 이용근 교수 그릿행복여행 철학</cite>
+    </div>
+  </div>
+</div>
+
+<!-- ── ADHD 뇌과학 ── -->
+<div class="wrap section" id="adhd">
+  <p class="sec-tag">// 01 · ADHD Neuroscience</p>
+  <h2 class="sec-h2">ADHD는 <em>뇌의 조건</em>이다<br>전두엽과 도파민의 이야기</h2>
+  <p class="sec-lead">ADHD(주의력결핍 과잉행동장애)는 의지박약이 아닙니다. 전두엽 발달의 상대적 지연과 도파민·노르에피네프린 불균형에서 비롯된 신경발달적 특성이며, 신경가소성을 통해 명상으로 훈련할 수 있습니다.</p>
+
+  <div class="adhd-grid">
+    <div class="adhd-card">
+      <div class="ac-icon">🧠</div>
+      <div class="ac-tag" style="color:var(--forest);">// 전전두피질 (PFC)</div>
+      <div class="ac-title">집행 기능의 이사회가 열리지 않는다</div>
+      <div class="ac-body">ADHD 뇌에서 전전두피질(PFC), 기저핵, 전측대상피질(ACC)의 기능적 연결이 약해져 계획·충동 억제·지속적 주의 전체가 흔들립니다.</div>
+      <span class="ac-chip" style="background:rgba(45,90,61,.1);color:var(--forest);">PFC 저활성화</span>
+    </div>
+    <div class="adhd-card">
+      <div class="ac-icon">⚡</div>
+      <div class="ac-tag" style="color:var(--sky);">// 신경전달물질</div>
+      <div class="ac-title">도파민·노르에피네프린의 불균형</div>
+      <div class="ac-body">집중에 필수적인 도파민의 재흡수 속도가 비정상적으로 빨라, 전두선조회로의 신호 연료가 충분히 공급되지 않습니다. 이 불균형이 충동성과 주의 결핍의 핵심 원인입니다.</div>
+      <span class="ac-chip" style="background:rgba(26,107,138,.1);color:var(--sky);">도파민 결핍</span>
+    </div>
+    <div class="adhd-card">
+      <div class="ac-icon">〰️</div>
+      <div class="ac-tag" style="color:var(--gold);">// qEEG 뇌파 분석</div>
+      <div class="ac-title">Theta 과잉 / Beta 부족: ADHD의 전자기적 지문</div>
+      <div class="ac-body">정량뇌파(qEEG) 연구들은 ADHD에서 전두엽 Theta파(4–8Hz) 과잉과 집중력 관련 Beta파(13–30Hz) 감소를 일관되게 확인합니다. 이 Theta/Beta 불균형이 부주의와 직접 상관됩니다.</div>
+      <span class="ac-chip" style="background:rgba(200,146,42,.1);color:var(--gold);">θ↑ β↓ 불균형</span>
+    </div>
+    <div class="adhd-card">
+      <div class="ac-icon">🔄</div>
+      <div class="ac-tag" style="color:var(--rose);">// 투쟁-회피 과잉</div>
+      <div class="ac-title">진화적 알고리즘의 현대적 오작동</div>
+      <div class="ac-body">생존을 위한 '투쟁-회피(fight-or-flight)' 반응 회로가 현대 환경에서 과잉 작동합니다. 타인의 말을 위협으로 감지하고 즉각 반박하는 '전쟁 심리'로 변질됩니다.</div>
+      <span class="ac-chip" style="background:rgba(181,67,74,.1);color:var(--rose);">반응 자동화</span>
+    </div>
+    <div class="adhd-card">
+      <div class="ac-icon">🌱</div>
+      <div class="ac-tag" style="color:var(--violet);">// 신경가소성</div>
+      <div class="ac-title">뇌는 훈련으로 바뀐다</div>
+      <div class="ac-body">뇌는 평생 새로운 신경 연결을 형성하는 신경가소성을 갖습니다. 명상은 이 가소성을 의도적으로 자극하는 비약물적 도구—전두엽을 두텁게 만들고 도파민 회로를 정비합니다.</div>
+      <span class="ac-chip" style="background:rgba(107,79,160,.1);color:var(--violet);">BDNF 증가</span>
+    </div>
+    <div class="adhd-card">
+      <div class="ac-icon">💡</div>
+      <div class="ac-tag" style="color:var(--forest);">// 메타주의력</div>
+      <div class="ac-title">ADHD의 핵심 결함 = 메타주의력 부재</div>
+      <div class="ac-body">ADHD의 가장 큰 어려움은 집중 자체가 아니라 '주의가 흩어졌음을 인식하지 못하는 것'입니다. 마음챙김 명상은 이 메타주의력을 반복 훈련하는 가장 직접적인 방법입니다.</div>
+      <span class="ac-chip" style="background:rgba(45,90,61,.1);color:var(--forest);">메타인지 훈련</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── 뉴로하모니 ── -->
+<div style="background:var(--warm);padding:6rem 0;" id="neuro">
+  <div class="wrap">
+    <p class="sec-tag">// 02 · NeuroHarmony Analysis</p>
+    <h2 class="sec-h2">뉴로하모니<br><em>뇌파 스펙트럼</em>으로 ADHD를 진단하고 치유한다</h2>
+    <p class="sec-lead">뉴로하모니(NeuroHarmony)는 뇌파 대역별 에너지 균형을 분석하여 ADHD 상태와 명상 상태를 정량화합니다. ADHD 뇌와 FAWA 명상 훈련된 뇌의 스펙트럼은 거울상처럼 대비됩니다.</p>
+
+    <div class="nh-wrap">
+      <div class="nh-header">
+        <div class="nh-title">NeuroHarmony Brainwave Spectrum</div>
+        <div class="nh-sub">실시간 뇌파 대역 에너지 비교 모델</div>
+      </div>
+      <div class="nh-body">
+        <!-- Wave displays -->
+        <div class="wave-row">
+          <div class="wave-label-row">
+            <span class="wlbl" style="color:var(--rose);">● ADHD 패턴 — Theta 과잉 / 전두엽 불안정</span>
+            <span class="wlbl" style="color:var(--muted);font-size:.58rem;">4–8 Hz 우세</span>
+          </div>
+          <div class="wave-track">
+            <svg class="wave-svg w-adhd" viewBox="0 0 2000 56" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+              <path d="M0 28 Q20 8 40 28 Q60 48 80 18 Q100 4 120 28 Q140 45 160 14 Q180 2 200 28 Q220 48 240 20 Q260 6 280 28 Q300 46 320 16 Q340 3 360 28 Q380 48 400 18 Q420 4 440 28 Q460 46 480 14 Q500 2 520 28 Q540 48 560 20 Q580 6 600 28 Q620 46 640 16 Q660 3 680 28 Q700 48 720 18 Q740 4 760 28 Q780 46 800 14 Q820 2 840 28 Q860 48 880 20 Q900 6 920 28 Q940 46 960 16 Q980 3 1000 28 Q1020 48 1040 18 Q1060 4 1080 28 Q1100 46 1120 14 Q1140 2 1160 28 Q1180 48 1200 20 Q1220 6 1240 28 Q1260 46 1280 16 Q1300 3 1320 28 Q1340 48 1360 18 Q1380 4 1400 28 Q1420 46 1440 14 Q1460 2 1480 28 Q1500 48 1520 20 Q1540 6 1560 28 Q1580 46 1600 16 Q1620 3 1640 28 Q1660 48 1680 18 Q1700 4 1720 28 Q1740 46 1760 14 Q1780 2 1800 28 Q1820 48 1840 20 Q1860 6 1880 28 Q1900 46 1920 16 Q1940 3 1960 28 Q1980 48 2000 20"
+                fill="none" stroke="#b5434a" stroke-width="2" opacity=".85"/>
+            </svg>
+          </div>
+        </div>
+        <div class="wave-row">
+          <div class="wave-label-row">
+            <span class="wlbl" style="color:var(--forest);">● FAWA 명상 후 — Alpha 공명 / 전두엽 안정</span>
+            <span class="wlbl" style="color:var(--muted);font-size:.58rem;">8–12 Hz 우세</span>
+          </div>
+          <div class="wave-track">
+            <svg class="wave-svg w-med" viewBox="0 0 2000 56" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+              <path d="M0 28 Q50 10 100 28 Q150 46 200 28 Q250 10 300 28 Q350 46 400 28 Q450 10 500 28 Q550 46 600 28 Q650 10 700 28 Q750 46 800 28 Q850 10 900 28 Q950 46 1000 28 Q1050 10 1100 28 Q1150 46 1200 28 Q1250 10 1300 28 Q1350 46 1400 28 Q1450 10 1500 28 Q1550 46 1600 28 Q1650 10 1700 28 Q1750 46 1800 28 Q1850 10 1900 28 Q1950 46 2000 28"
+                fill="none" stroke="#2d5a3d" stroke-width="2" opacity=".85"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Spectrum bars -->
+        <div class="spec-grid">
+          <div class="spec-col">
+            <div class="bar-group">
+              <div class="bar b-adhd" style="height:22px;"></div>
+              <div class="bar b-norm" style="height:20px;"></div>
+              <div class="bar b-fawa" style="height:15px;"></div>
+            </div>
+            <div class="slbl">Delta</div>
+            <div class="shz">1–4 Hz</div>
+          </div>
+          <div class="spec-col">
+            <div class="bar-group">
+              <div class="bar b-adhd" style="height:70px;"></div>
+              <div class="bar b-norm" style="height:35px;"></div>
+              <div class="bar b-fawa" style="height:25px;"></div>
+            </div>
+            <div class="slbl" style="color:var(--rose);">Theta ↑</div>
+            <div class="shz">4–8 Hz</div>
+          </div>
+          <div class="spec-col">
+            <div class="bar-group">
+              <div class="bar b-adhd" style="height:18px;"></div>
+              <div class="bar b-norm" style="height:44px;"></div>
+              <div class="bar b-fawa" style="height:70px;"></div>
+            </div>
+            <div class="slbl" style="color:var(--forest);">Alpha ↑</div>
+            <div class="shz">8–12 Hz</div>
+          </div>
+          <div class="spec-col">
+            <div class="bar-group">
+              <div class="bar b-adhd" style="height:16px;"></div>
+              <div class="bar b-norm" style="height:38px;"></div>
+              <div class="bar b-fawa" style="height:50px;"></div>
+            </div>
+            <div class="slbl" style="color:var(--sky);">SMR ↑</div>
+            <div class="shz">12–15 Hz</div>
+          </div>
+          <div class="spec-col">
+            <div class="bar-group">
+              <div class="bar b-adhd" style="height:15px;"></div>
+              <div class="bar b-norm" style="height:40px;"></div>
+              <div class="bar b-fawa" style="height:35px;"></div>
+            </div>
+            <div class="slbl">Beta</div>
+            <div class="shz">13–30 Hz</div>
+          </div>
+        </div>
+
+        <div class="spec-legend">
+          <div class="leg"><div class="ldot" style="background:var(--rose);"></div>ADHD 패턴 (Theta 과잉)</div>
+          <div class="leg"><div class="ldot" style="background:var(--sky);"></div>일반 기준</div>
+          <div class="leg"><div class="ldot" style="background:var(--forest);"></div>FAWA 명상 후 (Alpha·SMR 증가)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HRV Table -->
+    <div style="margin-top:3rem;">
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.2rem;font-weight:600;margin-bottom:.8rem;color:var(--deep);">심박변이도(HRV) Coherence — FAWA 수행과의 연결</h3>
+      <p style="font-size:.85rem;color:var(--muted);line-height:1.9;max-width:680px;margin-bottom:1.5rem;">2025년 발표된 180만 건 이상의 HRV 세션 분석 연구는 명상 수행 중 발생하는 HRV Coherence 상태(약 0.1Hz 공명)가 감정 안정성과 자율신경 균형을 실질적으로 변화시킨다고 확인했습니다.</p>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>HRV 지표</th><th>ADHD 상태</th><th>FAWA 명상 후</th><th>FAWA 대응 단계</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>RMSSD</td><td style="color:var(--rose);">감소 (자율신경 경직)</td><td style="color:var(--forest);">유의미한 상승</td><td>몰(Absorb) — 심폐 결합 형성</td></tr>
+            <tr><td>SDNN</td><td style="color:var(--rose);">낮음 (스트레스 고착)</td><td style="color:var(--forest);">상승 (유연성 회복)</td><td>지(Watch) — 자율신경 평형</td></tr>
+            <tr><td>LnHF 고주파 파워</td><td style="color:var(--rose);">억압됨</td><td style="color:var(--forest);">대수적 상승</td><td>따(Follow) — 부교감 활성화</td></tr>
+            <tr><td>HRV Coherence 0.1Hz</td><td style="color:var(--rose);">불안정·비선형</td><td style="color:var(--forest);">정현파 안정화</td><td>몰·지 단계에서 자발 형성</td></tr>
+            <tr><td>심장 생체자기장 HEMF</td><td style="color:var(--muted);">감정 불안정</td><td style="color:var(--sky);">감사·자애 수행 시 안정</td><td>알(Awareness) — 공존감 완성</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FAWA 4단계 ── -->
+<div class="wrap section" id="fawa">
+  <p class="sec-tag">// 03 · FAWA 선명상 4단계</p>
+  <h2 class="sec-h2">이근원통 기반<br><em>FAWA</em> 통합 수행 프로토콜</h2>
+  <p class="sec-lead">강태원 수행연구가가 능엄경 이근원통의 반문문자성(反聞聞自性) 원리를 현대 뇌과학과 융합하여 구조화한 4단계 인지 훈련 프로토콜입니다. 각 단계는 ADHD의 핵심 결함을 정밀하게 타깃합니다.</p>
+
+  <!-- Pre-FAWA -->
+  <div style="margin:2rem 0 1rem;padding:1rem 1.5rem;background:rgba(45,90,61,.06);border:1px solid rgba(45,90,61,.15);border-radius:10px;display:flex;align-items:center;gap:1rem;">
+    <span style="font-size:1.4rem;">🕯️</span>
+    <div>
+      <div style="font-family:'DM Mono',monospace;font-size:.6rem;letter-spacing:.2em;color:var(--forest);margin-bottom:.2rem;">PRE-FAWA · 환경 정렬</div>
+      <div style="font-size:.85rem;color:var(--muted);">자세 정렬 → 3회 깊은 호흡 → 청각 채널 개방 | 이근원통: 環境整列 | 자율신경 안정·감각 준비</div>
+    </div>
+  </div>
+
+  <div class="fawa-wrap">
+    <!-- 따 -->
+    <div class="fawa-item f1">
+      <div class="fi-left">
+        <div class="fi-num">01</div>
+        <div class="fi-kr">따</div>
+        <div class="fi-en">FOLLOW · 따라하기</div>
+        <div class="fi-igeun">이근원통: 문성(聞聲)</div>
+      </div>
+      <div class="fi-right">
+        <div class="fi-rtitle">소리와 감각을 판단 없이 따라가기</div>
+        <div class="fi-rbody">들려오는 소리의 의미를 분석하지 않고 있는 그대로 수용합니다. 신경과학적으로 이는 <strong>감각 정밀도 가중치(Precision Weighting)</strong>를 높이는 과정입니다. 촉각·온도·고유감각 수용기의 원초적 신호가 일차 체성감각 피질(S1)과 섬엽(Insula)으로 여과 없이 유입됩니다.</div>
+        <div class="fi-adhd">
+          <div class="fi-adhd-lbl">// ADHD 치유 접점</div>
+          즉각 반박·산만함이라는 '전쟁 심리' 자동화 회로를 멈추는 첫 번째 진화적 전환점. 타인의 말을 위협이 아닌 감각 현상으로 수용하기 시작합니다.
+        </div>
+        <div class="fi-chips">
+          <span class="fi-chip">사대 각성</span><span class="fi-chip">S1·Insula 활성</span>
+          <span class="fi-chip">상향식 수용</span><span class="fi-chip">부교감신경 준비</span>
+          <span class="fi-chip" style="color:var(--forest);border-color:rgba(45,90,61,.3);">Alpha 파 증가 시작</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 몰 -->
+    <div class="fawa-item f2">
+      <div class="fi-left">
+        <div class="fi-num">02</div>
+        <div class="fi-kr">몰</div>
+        <div class="fi-en">ABSORB · 몰입하기</div>
+        <div class="fi-igeun">이근원통: 각문(覺聞)</div>
+      </div>
+      <div class="fi-right">
+        <div class="fi-rtitle">소리의 공명이 전신으로 퍼지도록 허용하기</div>
+        <div class="fi-rbody">소리의 진동이 가슴·횡격막 전신으로 퍼지는 것을 허용합니다. <strong>기본 모드 네트워크(DMN)</strong>의 자아 내러티브가 급감하고 세일리언스 네트워크(SN)가 주도권을 잡습니다. 뇌파(Alpha, Theta)가 호흡 리듬과 동기화되어 HRV Coherence가 형성됩니다.</div>
+        <div class="fi-adhd">
+          <div class="fi-adhd-lbl">// ADHD 치유 접점</div>
+          '나'라는 인지적 저항이 사라지며 만성 반추와 과잉 자아 내러티브가 해소됩니다. 섬엽(Insula) 기반의 내수용감각 확장으로 생태적 연결감이 형성됩니다.
+        </div>
+        <div class="fi-chips">
+          <span class="fi-chip">DMN 감소</span><span class="fi-chip">SN 활성</span>
+          <span class="fi-chip">HRV Coherence</span><span class="fi-chip">심폐 결합</span>
+          <span class="fi-chip" style="color:var(--sky);border-color:rgba(26,107,138,.3);">θ/α 동기화</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 지 -->
+    <div class="fawa-item f3">
+      <div class="fi-left">
+        <div class="fi-num">03</div>
+        <div class="fi-kr">지</div>
+        <div class="fi-en">WATCH · 지켜보기</div>
+        <div class="fi-igeun">이근원통: 반문(反聞)</div>
+      </div>
+      <div class="fi-right">
+        <div class="fi-rtitle">듣는 자를 돌이켜 비추기 — 이근원통의 핵심</div>
+        <div class="fi-rbody">소리에 함몰되지 않고 <strong>"지금 누가 듣는가"</strong>를 관조합니다. 배외측 전전두엽(dlPFC)이 활성화되어 <strong>메타인지</strong>와 <strong>메타주의력</strong>이 훈련됩니다. 자동화된 투쟁-회피 회로가 해체되는 결정적 전환점입니다.</div>
+        <div class="fi-adhd">
+          <div class="fi-adhd-lbl">// ADHD 치유 접점</div>
+          ADHD의 가장 핵심 결함인 '주의가 흩어졌음을 인식하지 못하는 것'을 직접 훈련합니다. 충동적 반응 이전에 알아차리는 능력이 반복 강화됩니다.
+        </div>
+        <div class="fi-chips">
+          <span class="fi-chip">dlPFC 활성</span><span class="fi-chip">메타주의력</span>
+          <span class="fi-chip">탈동일시</span><span class="fi-chip">DMN 비동기화</span>
+          <span class="fi-chip" style="color:var(--gold);border-color:rgba(200,146,42,.3);">충동 억제 강화</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 알 -->
+    <div class="fawa-item f4">
+      <div class="fi-left">
+        <div class="fi-num">04</div>
+        <div class="fi-kr">알</div>
+        <div class="fi-en">AWARENESS · 알아차리기</div>
+        <div class="fi-igeun">이근원통: 문성현전(聞性現前)</div>
+      </div>
+      <div class="fi-right">
+        <div class="fi-rtitle">소리가 사라진 정적 속 밝은 자각의 장</div>
+        <div class="fi-rbody">주체와 객체의 경계가 사라지고 소리의 유무와 관계없이 명징한 자각이 유지됩니다. 신경계 전체의 <strong>코히어런스(Coherence)</strong>가 극대화되어 뇌-심장-장 축이 공명합니다. <strong>예측 오류의 붕괴(Prediction Error Collapse)</strong>가 일어납니다.</div>
+        <div class="fi-adhd">
+          <div class="fi-adhd-lbl">// ADHD 치유 접점</div>
+          분리감과 만성 불안에서 벗어나 공존감(Co-existence Awareness)이 확립됩니다. 자연계와의 동질성 자각으로 충동적 반응의 근원이 해소됩니다.
+        </div>
+        <div class="fi-chips">
+          <span class="fi-chip">신경 공명</span><span class="fi-chip">예측 오류 붕괴</span>
+          <span class="fi-chip">PFC-시상 결합</span>
+          <span class="fi-chip" style="color:var(--violet);border-color:rgba(107,79,160,.3);">공존감 완성</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 임상 근거 ── -->
+<div style="background:var(--warm);padding:6rem 0;">
+  <div class="wrap">
+    <p class="sec-tag">// 04 · Scientific Evidence</p>
+    <h2 class="sec-h2">효과가 <em>검증된</em><br>임상 연구들</h2>
+    <p class="sec-lead">명상의 ADHD 치유 효과는 뇌영상, 메타분석, 무작위 대조 임상시험으로 반복 검증된 과학적 사실입니다.</p>
+    <div class="ev-grid">
+      <div class="ev-card">
+        <div class="ev-icon">🎓</div>
+        <div class="ev-src">UCLA MAPs Program</div>
+        <div class="ev-claim">8주 만에 집중력·불안 모두 개선</div>
+        <div class="ev-body">주의력 장애 성인·청소년 대상 MAPs(Mindful Awareness Practices) for ADHD. 8주 구조화 명상 후 자기보고·신경심리검사 모두에서 유의미한 개선이 확인됐습니다.</div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-icon">📊</div>
+        <div class="ev-src">Cairncross & Miller 메타분석 2019</div>
+        <div class="ev-claim">부주의·과잉행동 모두 유의미하게 감소</div>
+        <div class="ev-body">마음챙김 개입이 ADHD의 두 핵심 증상—부주의와 과잉행동·충동성—을 동시에 개선함을 메타분석으로 입증. 성인에서의 부주의 개선 효과가 더 크게 나타났습니다.</div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-icon">🧬</div>
+        <div class="ev-src">fMRI RCT · ScienceDirect 2018</div>
+        <div class="ev-claim">뇌 구조가 실제로 바뀐다</div>
+        <div class="ev-body">무작위 대조 fMRI 연구에서 명상 훈련 후 작업기억 관련 전두-두정 회로의 기능적 연결성이 실질적으로 강화됐습니다. 행동 개선이 뇌 변화와 직접 대응했습니다.</div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-icon">🏯</div>
+        <div class="ev-src">Scientific Reports 2023 · 한국 템플스테이</div>
+        <div class="ev-claim">단 4일 집중 명상으로 ACC·dlPFC 활성</div>
+        <div class="ev-body">한국 불교 명상 기반 4일 템플스테이 참가자에서도 우측 ACC와 우측 dlPFC 활성화가 직접 증가했습니다. 집행 기능 향상과 신경가소성 변화가 단기간에 확인됐습니다.</div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-icon">💓</div>
+        <div class="ev-src">HRV 메가 스터디 2025 (180만 세션)</div>
+        <div class="ev-claim">심장-자율신경 리듬이 정현파로 안정</div>
+        <div class="ev-body">명상·호흡 수행의 Coherence 상태(0.1Hz)가 감정 안정성과 깊게 연결됨을 확인. FAWA의 몰입하기·지켜보기 상태와 직접 대응합니다.</div>
+      </div>
+      <div class="ev-card">
+        <div class="ev-icon">📈</div>
+        <div class="ev-src">한국 메타분석 2015 (141편)</div>
+        <div class="ev-claim">마음챙김 효과크기 0.846 — '큰 효과'</div>
+        <div class="ev-body">2004–2015년 141편의 연구를 종합한 결과 효과크기 0.846—통계적으로 '큰 효과'. 청소년에서도 성인과 동등한 큰 효과가 확인됐습니다.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CALLOUT ── -->
+<div class="callout">
+  <div class="wrap">
+    <blockquote>
+      뇌는 훈련으로 바뀐다.<br>
+      <strong>명상은 전두엽을 두텁게</strong> 만들고,<br>
+      <strong>도파민 회로를 정비</strong>하며,<br>
+      ADHD의 뇌를 조금씩 다른 방향으로 <strong>빚어간다.</strong>
+    </blockquote>
+    <cite>— 강태원, FAWA 선명상 수행의 단계별 신경생리학적 메커니즘 분석</cite>
+  </div>
+</div>
+
+<!-- ── 그릿행복여행 ── -->
+<div class="wrap section" id="grit">
+  <p class="sec-tag">// 05 · GRIT 그릿 행복여행</p>
+  <h2 class="sec-h2">이용근 교수의<br><em>그릿 행복여행</em> 프레임워크</h2>
+  <p class="sec-lead">앤젤라 더크워스(Angela Duckworth)가 제시한 그릿(GRIT)—열정과 끈기의 결합—은 ADHD 치유 여정과 완벽히 맞닿아 있습니다. 이용근 교수는 그릿의 네 요소를 행복 여행의 구조로 재해석하고, FAWA 명상과 K-MediWell 웰니스 투어리즘으로 구현합니다.</p>
+
+  <div class="grit-grid">
+    <div class="grit-card g1">
+      <div class="gc-letter">G</div>
+      <div class="gc-word">GROWTH · 성장</div>
+      <div class="gc-kr">관심(Interest)<br>열정의 씨앗</div>
+      <div class="gc-body">진정으로 즐기는 것을 찾는 것이 그릿의 시작입니다. ADHD는 종종 깊은 관심을 가진 분야에서 놀라운 몰입을 보입니다. 그 관심을 발견하고 키우는 것이 치유의 첫 걸음입니다.</div>
+      <div class="gc-fawa">↔ FAWA: 따(Follow) — 감각을 따라가며 나의 관심을 발견</div>
+    </div>
+    <div class="grit-card g2">
+      <div class="gc-letter">R</div>
+      <div class="gc-word">RESILIENCE · 회복</div>
+      <div class="gc-kr">연습(Practice)<br>의도된 반복</div>
+      <div class="gc-body">어제보다 잘하려고 매일 단련하는 끈기입니다. 명상 수행의 매일 반복이 뇌의 전두엽을 두텁게 만들고 신경가소성을 자극합니다. 회복탄력성이 ADHD의 좌절을 이겨냅니다.</div>
+      <div class="gc-fawa">↔ FAWA: 몰(Absorb) — 매일의 수행이 신경회로를 재편</div>
+    </div>
+    <div class="grit-card g3">
+      <div class="gc-letter">I</div>
+      <div class="gc-word">INTRINSIC · 내재 동기</div>
+      <div class="gc-kr">목적(Purpose)<br>의미의 발견</div>
+      <div class="gc-body">자신의 일이 중요하다는 확신이 열정을 무르익게 합니다. 내 삶과 타인, 자연이 연결되어 있다는 공존감이 ADHD의 분리감을 녹이는 가장 강력한 내재 동기가 됩니다.</div>
+      <div class="gc-fawa">↔ FAWA: 지(Watch) — 듣는 자를 관조하며 목적 의식 각성</div>
+    </div>
+    <div class="grit-card g4">
+      <div class="gc-letter">T</div>
+      <div class="gc-word">TRANSCENDENCE · 초월</div>
+      <div class="gc-kr">희망(Hope)<br>위기를 넘는 힘</div>
+      <div class="gc-body">희망은 위기에 대처하게 해주는 끈기입니다. ADHD 치유 과정의 좌절과 실패를 초월하고, '나는 변화할 수 있다'는 신경가소성에 대한 희망이 지속적인 수행을 이끕니다.</div>
+      <div class="gc-fawa">↔ FAWA: 알(Awareness) — 공존감 속에서 초월적 희망 완성</div>
+    </div>
+  </div>
+
+  <!-- 투쟁심리 → 그릿 → 공존감 -->
+  <div class="transform-wrap" style="margin-top:4rem;">
+    <div class="tr-box before">
+      <div class="tr-label">BEFORE · 투쟁 심리 (ADHD)</div>
+      <div class="tr-title">War Psychology</div>
+      <ul class="tr-list">
+        <li>타인의 말을 위협으로 감지</li>
+        <li>즉각적 반박·차단 반응</li>
+        <li>만성 스트레스·피로 축적</li>
+        <li>분리감·고립감</li>
+        <li>충동적 행동·산만함</li>
+        <li>그릿 부재 — 쉽게 포기</li>
+      </ul>
+    </div>
+    <div class="tr-arrow">
+      <div style="font-size:.65rem;font-family:'DM Mono',monospace;letter-spacing:.1em;color:var(--forest);margin-bottom:.3rem;">FAWA</div>
+      →
+      <div style="font-size:.65rem;font-family:'DM Mono',monospace;letter-spacing:.1em;color:var(--forest);margin-top:.3rem;">그릿여행</div>
+    </div>
+    <div class="tr-box after">
+      <div class="tr-label">AFTER · 그릿 공존감</div>
+      <div class="tr-title">GRIT × Co-existence</div>
+      <ul class="tr-list">
+        <li>소리를 있는 그대로 수용</li>
+        <li>반응 이전의 알아차림</li>
+        <li>HRV 안정·자율신경 평형</li>
+        <li>생태적 연결감·공존감</li>
+        <li>충동 억제·메타주의력</li>
+        <li>그릿 — 열정과 끈기 확립</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ── K-MediWell ── -->
+<div class="kmw-hero" id="kmediwell">
+  <div class="wrap">
+    <div class="kmw-logo">K-<span>MediWell</span></div>
+    <p style="font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.25em;color:rgba(255,255,255,.5);margin-bottom:.8rem;">그릿행복여행 · 의료웰니스 융합 투어리즘</p>
+    <p class="kmw-sub">K-MediWell은 의료관광(Medical Tourism)과 웰니스관광(Wellness Tourism)을 융합한 한국형 고부가가치 힐링 투어리즘 모델입니다. ADHD를 포함한 현대인의 신경생리학적 불균형을 FAWA 선명상, 뉴로하모니 분석, 그릿 행복여행으로 치유합니다.</p>
+    <div class="kmw-pills">
+      <span class="kmw-pill">FAWA 선명상</span>
+      <span class="kmw-pill">뉴로하모니 분석</span>
+      <span class="kmw-pill">그릿 행복여행</span>
+      <span class="kmw-pill">HRV 바이오피드백</span>
+      <span class="kmw-pill">이근원통 수행</span>
+      <span class="kmw-pill">K-Culture 웰니스</span>
+    </div>
+  </div>
+</div>
+
+<div style="background:var(--cream);padding:6rem 0;">
+  <div class="wrap">
+    <p class="sec-tag">// 06 · K-MediWell 그릿행복여행 프로그램</p>
+    <h2 class="sec-h2">ADHD 치유를 위한<br><em>그릿행복여행</em> 통합 프로그램</h2>
+    <p class="sec-lead">이용근 교수가 설계한 K-MediWell 그릿행복여행은 FAWA 선명상, 뉴로하모니 뇌과학 분석, 그릿 코칭을 통합하여 ADHD 치유와 행복한 삶의 지속 가능성을 함께 훈련합니다.</p>
+
+    <div class="kmw-prog-grid">
+      <div class="prog-card">
+        <div class="prog-day">DAY 01 · 따(Follow)</div>
+        <div class="prog-title">감각 깨우기 — 나를 따라가는 여행</div>
+        <ul class="prog-items">
+          <li>뉴로하모니 뇌파 측정 (qEEG 기반 사전 진단)</li>
+          <li>HRV 심박변이도 초기 측정</li>
+          <li>FAWA 따(Follow) 입문 — 자연 소리 명상</li>
+          <li>이근원통 문성(聞聲) 수행 체험</li>
+          <li>그릿 관심(Interest) 발견 워크숍</li>
+        </ul>
+      </div>
+      <div class="prog-card">
+        <div class="prog-day">DAY 02 · 몰(Absorb)</div>
+        <div class="prog-title">몰입하기 — 자아 경계를 녹이는 여행</div>
+        <ul class="prog-items">
+          <li>FAWA 몰(Absorb) 심화 수행</li>
+          <li>호흡 Coherence 훈련 (0.1Hz 공명)</li>
+          <li>자연 속 걷기 명상 (산림치유 연계)</li>
+          <li>뉴로하모니 중간 뇌파 비교</li>
+          <li>그릿 연습(Practice) — 의도된 반복 훈련</li>
+        </ul>
+      </div>
+      <div class="prog-card">
+        <div class="prog-day">DAY 03 · 지(Watch)</div>
+        <div class="prog-title">지켜보기 — 듣는 자를 만나는 여행</div>
+        <ul class="prog-items">
+          <li>이근원통 반문(反聞) 집중 수행</li>
+          <li>메타인지 훈련 — 충동 알아차리기</li>
+          <li>ADHD 행동 패턴 코칭 세션</li>
+          <li>그릿 목적(Purpose) — 의미 발견 대화</li>
+          <li>자애(Metta) 명상 · 대인 공명 훈련</li>
+        </ul>
+      </div>
+      <div class="prog-card">
+        <div class="prog-day">DAY 04 · 알(Awareness)</div>
+        <div class="prog-title">알아차리기 — 공존감을 깨우는 여행</div>
+        <ul class="prog-items">
+          <li>FAWA 알(Awareness) 통합 수행</li>
+          <li>뉴로하모니 최종 뇌파 사전/사후 비교</li>
+          <li>HRV Coherence 최종 측정 분석</li>
+          <li>그릿 희망(Hope) — 지속 수행 계획 수립</li>
+          <li>공존감 확립 — 개전일체(開全一體) 체험</li>
+        </ul>
+      </div>
+      <div class="prog-card">
+        <div class="prog-day">FOLLOW-UP · 사후 관리</div>
+        <div class="prog-title">일상 속 그릿 수행 — 지속 가능한 치유</div>
+        <ul class="prog-items">
+          <li>매일 10분 FAWA 홈 프랙티스 가이드</li>
+          <li>뉴로하모니 앱 기반 뇌파 셀프 모니터링</li>
+          <li>그릿 코칭 월 1회 온라인 세션</li>
+          <li>ADHD 가족·파트너 교육 프로그램</li>
+          <li>K-MediWell 커뮤니티 동기 부여 네트워크</li>
+        </ul>
+      </div>
+      <div class="prog-card" style="background:var(--forest);border-color:var(--forest);">
+        <div class="prog-day" style="color:rgba(255,255,255,.6);">WHY K-MediWell</div>
+        <div class="prog-title" style="color:#fff;">왜 여행인가?</div>
+        <ul class="prog-items" style="color:rgba(255,255,255,.75);">
+          <li style="border-color:rgba(255,255,255,.15);">일상 환경 탈출 → 뇌의 기본 모드 재설정</li>
+          <li style="border-color:rgba(255,255,255,.15);">자연환경 → 코르티솔 감소·Alpha 파 증가</li>
+          <li style="border-color:rgba(255,255,255,.15);">집중 수행 → 신경가소성 극대화</li>
+          <li style="border-color:rgba(255,255,255,.15);">공동체 경험 → 대인 생리 동기화</li>
+          <li>한국 웰니스 인프라 + K-Culture 시너지</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Journey map -->
+    <div style="margin-top:4rem;">
+      <h3 style="font-family:'Noto Serif KR',serif;font-size:1.2rem;font-weight:600;margin-bottom:2rem;color:var(--deep);">그릿행복여행 치유 여정 로드맵</h3>
+      <div class="journey">
+        <div class="journey-line"></div>
+        <div class="journey-stops">
+          <div class="jstop">
+            <div class="j-dot">🌱</div>
+            <div class="j-title">출발점</div>
+            <div class="j-body">ADHD 진단·뉴로하모니 뇌파 측정·HRV 기초치 확인</div>
+          </div>
+          <div class="jstop">
+            <div class="j-dot">🌊</div>
+            <div class="j-title">감각 여행</div>
+            <div class="j-body">따·몰 수행으로 감각 깨우기·자아 경계 해체·Coherence 형성</div>
+          </div>
+          <div class="jstop">
+            <div class="j-dot">🔭</div>
+            <div class="j-title">관조 여행</div>
+            <div class="j-body">지켜보기·반문수행으로 메타주의력 훈련·그릿 목적 발견</div>
+          </div>
+          <div class="jstop">
+            <div class="j-dot">✨</div>
+            <div class="j-title">각성 여행</div>
+            <div class="j-body">공존감 확립·신경 공명 완성·사후 뉴로하모니 비교</div>
+          </div>
+          <div class="jstop">
+            <div class="j-dot">🌍</div>
+            <div class="j-title">일상 귀환</div>
+            <div class="j-body">그릿 수행 지속·홈 프랙티스·커뮤니티 연결</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 교수 카드 ── -->
+<div class="prof-band">
+  <div class="wrap">
+    <div class="prof-card">
+      <div class="prof-avatar">🎓</div>
+      <div>
+        <div class="prof-name">이용근 교수</div>
+        <div class="prof-title-txt">K-MediWell 그릿행복여행 · 관광·웰니스 통합 연구</div>
+        <p class="prof-bio">
+          이용근 교수는 K-MediWell(의료관광+웰니스관광 융합) 프레임워크를 기반으로
+          앤젤라 더크워스의 그릿(GRIT) 이론—열정과 끈기—과 FAWA 선명상, 뉴로하모니 뇌과학 분석을
+          통합하여 현대인의 ADHD와 만성 스트레스를 치유하는 '그릿행복여행' 프로그램을 연구·개발하고 있습니다.
+          그릿행복여행은 단순한 여행이 아니라 신경가소성 훈련, 공존감 각성, 삶의 열정 회복을 통해
+          지속 가능한 행복을 건축하는 통합 여정입니다.
+        </p>
+        <div class="prof-tags">
+          <span class="prof-tag">K-MediWell</span>
+          <span class="prof-tag">그릿(GRIT) 이론</span>
+          <span class="prof-tag">FAWA 선명상</span>
+          <span class="prof-tag">뉴로하모니</span>
+          <span class="prof-tag">웰니스투어리즘</span>
+          <span class="prof-tag">ADHD 비약물 치유</span>
+          <span class="prof-tag">이근원통 수행</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CALLOUT -->
+<div class="callout">
+  <div class="wrap">
+    <blockquote>
+      "그릿이 높은 사람일수록 스트레스를 적게 경험하고,<br>
+      <strong>통제감을 높게 인지</strong>하며, 우울 증상을 적게 느낀다.<br>
+      그릿은 선천적이 아니다—<strong>매일의 명상과 수행</strong>이<br>
+      뇌에 새기는 열정과 끈기다."
+    </blockquote>
+    <cite>— Brain Sciences 게재 연구 (강북삼성병원 기업정신건강연구소)</cite>
+    <br>
+    <a class="callout-link" href="http://www.kmediwell.kr/" target="_blank">
+      K-MediWell 그릿행복여행 바로가기 →
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>K-MediWell 그릿행복여행</strong> · ADHD × FAWA 선명상 × 뉴로하모니 통합 치유 프레임</p>
+  <p>이용근 교수 · <a href="http://www.kmediwell.kr/" target="_blank">www.kmediwell.kr</a></p>
+  <p>참고: 강태원 「FAWA 선명상 수행 메커니즘」 · 「이근원통 기반 FAWA 통합 수행 체계」 · Angela Duckworth, GRIT (2016) · Cairncross & Miller (2019) · Scientific Reports (2023) · Brain & Behavior (2025) · 능엄경 이근원통장</p>
+  <p style="margin-top:.5rem;opacity:.6;">※ 본 자료는 교육·연구 목적으로 제작되었으며, 의학적 진료를 대신하지 않습니다.</p>
+</footer>
+
+</body>
+</html>
